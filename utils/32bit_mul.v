@@ -1,5 +1,6 @@
 module multiplier_32bit(
     input wire clk,
+    input wire rst,
     input wire start,
     input wire [31:0] A,
     input wire [31:0] B,
@@ -11,6 +12,15 @@ module multiplier_32bit(
     reg [63:0] product;
     reg [5:0] count;
     reg running;
+
+    always @(posedge rst) begin
+        multiplicand <= 0;
+        multiplier <= 0;
+        product <= 0;
+        count <= 0;
+        running <= 0;
+        done <= 0;
+    end
 
     always @(posedge start) begin
         multiplicand <= A;

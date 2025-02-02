@@ -1,5 +1,6 @@
 module shifter_32bit (
     input wire clk,
+    input wire rst,
     input wire start,
     input wire [31:0] data_in,
     input wire [4:0] shift_amount,  // Supports shifting up to 31 bits
@@ -11,6 +12,13 @@ module shifter_32bit (
     reg [31:0] shift_reg;
     reg [4:0] count;
     reg running;
+
+    always @(posedge rst) begin
+        shift_reg <= 0;
+        count <= 0;
+        running <= 0;
+        done <= 0;
+    end
 
     always @(posedge start) begin
         shift_reg <= data_in;
