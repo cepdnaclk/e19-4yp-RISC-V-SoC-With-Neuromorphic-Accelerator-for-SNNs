@@ -57,17 +57,17 @@ module potential_adder_tb();
         #10 load = 0; init_mode = 3'b000; // Set Default
         
         // Test LIF Model
-        #10 model = 2'b00; input_weight = 32'd15; decayed_potential = 32'd25; time_step = 1;
+        #10 model = 2'b00; input_weight = 32'd25; decayed_potential = 32'd25; time_step = 1;
         #10 time_step = 0;
         #100;
         
         // Test Izhikevich Model
-        #20 model = 2'b01; input_weight = 32'd5; decayed_potential = 32'd35; time_step = 1;
+        #20 model = 2'b01; input_weight = 32'd25; decayed_potential = 32'd35; time_step = 1;
         #10 time_step = 0;
         #1000;
         
         // Test QLIF Model
-        #20 model = 2'b10; input_weight = 32'd20; decayed_potential = 32'd10; time_step = 1;
+        #20 model = 2'b10; input_weight = 32'd30; decayed_potential = 32'd10; time_step = 1;
         #10 time_step = 0;
         #100;
         

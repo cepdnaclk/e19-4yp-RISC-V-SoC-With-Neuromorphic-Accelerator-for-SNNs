@@ -26,12 +26,12 @@ module potential_adder (
     wire [31:0] bv_u;
     reg [31:0] a, b, c, d, v_threshold;
     
-    reg bv_start, abv_start;
+    reg bv_start, abv_start, clear_mul;
     wire bv_done, abv_done;
 
     multiplier_32bit multIzhiBV (
         .clk(clk),
-        .rst(time_step),
+        .rst(clear_mul),
         .start(bv_start),
         .A(b),
         .B(decayed_potential),
@@ -41,7 +41,7 @@ module potential_adder (
 
     multiplier_32bit multIzhiaBVu (
         .clk(clk),
-        .rst(time_step),
+        .rst(clear_mul),
         .start(abv_start),
         .A(a),
         .B(bv_u),
@@ -75,6 +75,7 @@ module potential_adder (
     always @(posedge time_step) begin
         done <= 0;
         spike <= 0;
+        clear_mul <= 1;
         if (init_mode == `DEFAULT) begin
             if (model == `LIF) begin
                 weight_added <= input_weight + decayed_potential;
@@ -86,6 +87,7 @@ module potential_adder (
                 weight_added <= input_weight + decayed_potential;
             end
         end
+        #10 clear_mul <= 0;
     end
 
     always @(posedge clk) begin
@@ -106,10 +108,12 @@ module potential_adder (
                 done <= 1;
             end else if (model == `IZHI) begin
                 if(abv_done) begin
+                    clear_mul <= 1;
                     spike <= (weight_added > v_threshold);
                     final_potential <= (weight_added > v_threshold) ? c : weight_added;
                     u <= (weight_added > v_threshold) ? u + d : a_bv_u[31:0];
                     done <= 1;
+                    #10 clear_mul <= 0;
                 end
             end else if (model == `QLIF) begin
                 spike <= (weight_added > v_threshold);
