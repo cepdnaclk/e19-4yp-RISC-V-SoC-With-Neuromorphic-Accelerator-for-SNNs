@@ -37,7 +37,7 @@ title: RISC-V SoC With Neuromorphic Accelerator for SNNs
 
 ## Abstract
 
-This project focuses on designing a **RISC-V SoC** integrated with a **SIB Neuromorphic Accelerator** for **small-scale Spiking Neural Network (SNN) applications**. The **RISC-V processor** manages the accelerator to enable **low-power, low-latency edge computing**. This system is aimed at providing efficient, real-time AI capabilities for embedded systems and edge devices, ideal for neuromorphic processing.
+This project focuses on designing a **RISC-V SoC** integrated with a **Neuromorphic Accelerator** for **small-scale Spiking Neural Network (SNN) applications**. The **RISC-V processor** manages the accelerator to enable **low-power, low-latency edge computing**. This system is aimed at providing efficient, real-time AI capabilities for embedded systems and edge devices, ideal for neuromorphic processing.
 
 ## Related works
 
