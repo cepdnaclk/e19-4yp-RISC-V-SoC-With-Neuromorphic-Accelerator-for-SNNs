@@ -1,36 +1,29 @@
 {
     "team": [
         {
-            "name": "Team Member Name 1",
-            "email": "email@eng.pdn.ac.lk",
-            "eNumber": "E/yy/xxx"
+            "name": "Gunawardana K.H.",
+            "email": "e19129@eng.pdn.ac.lk",
+            "eNumber": "E/19/129"
         },
         {
-            "name": "Team Member Name 2",
-            "email": "email@eng.pdn.ac.lk",
-            "eNumber": "E/yy/xxx"
+            "name": "Peeris M.S.",
+            "email": "e19275@eng.pdn.ac.lk",
+            "eNumber": "E/19/275"
         },
         {
-            "name": "Team Member Name 3",
-            "email": "email@eng.pdn.ac.lk",
-            "eNumber": "E/yy/xxx"
+            "name": "Rambukwella H.M.W.K.G.",
+            "email": "e19309@eng.pdn.ac.lk",
+            "eNumber": "E/19/309"
         }
     ],
     "supervisors": [
         {
-            "name": "Dr. Supervisor 1",
-            "email": "email@eng.pdn.ac.lk"
+            "name": "Dr. Isuru Nawinne",
+            "email": "isurunawinne@eng.pdn.ac.lk"
         },
         {
-            "name": "Dr. Supervisor 2",
-            "email": "email@eng.pdn.ac.lk"
-        }
-    ],
-    "media": [
-        {
-            "type": "youtube",
-            "title": "",
-            "url": "#"
+            "name": "Prof. Roshan G. Ragel",
+            "email": "roshanr@eng.pdn.ac.lk"
         }
     ],
     "tags": ["Final Year Projects"]
