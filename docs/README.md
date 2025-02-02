@@ -1,3 +1,4 @@
+---
 layout: home
 permalink: index.html
 
@@ -5,6 +6,8 @@ permalink: index.html
 repository-name: e19-4yp-RISC-V-SoC-With-Neuromorphic-Accelerator-for-SNNs
 title: RISC-V SoC With Neuromorphic Accelerator for SNNs
 ---
+
+[comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
 # RISC-V SoC With Neuromorphic Accelerator for SNNs
 
