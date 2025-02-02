@@ -30,7 +30,7 @@ module potential_decay_tb;
         forever begin
             time_step = 1;
             #10 time_step = 0;
-            #80;
+            #400;
         end
     end
 
@@ -60,7 +60,7 @@ module potential_decay_tb;
         load = 1;
         #10 load = 0;
         
-        #20 mode = 3'b010; 
+        #20 mode = `IZHI; 
 
         // End simulation
         #5000 $finish;
