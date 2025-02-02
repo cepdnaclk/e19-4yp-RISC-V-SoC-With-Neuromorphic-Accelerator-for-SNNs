@@ -19,12 +19,12 @@ module potential_decay(
     wire done_lif2;
     wire done_lif4;
     wire done_lif8;
-    wire [63:0] v_squared;
-    wire [31:0] izi_first_term;
-    wire [63:0] izi_second_term;
     wire v_squared_done;
     wire izi1_done;
     wire izi2_done;
+    wire [63:0] v_squared;
+    wire [31:0] izi_first_term;
+    wire [63:0] izi_second_term;
     reg start;
 
     multiplier_32bit v_squared_mul(
