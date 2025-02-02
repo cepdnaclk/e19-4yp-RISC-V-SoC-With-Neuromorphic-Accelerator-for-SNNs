@@ -1,0 +1,289 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 208 416)
+	(text "network_interface_test" (rect 5 0 95 12)(font "Arial" ))
+	(text "inst" (rect 8 384 20 396)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 20 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 41 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "spike0" (rect 0 0 24 12)(font "Arial" ))
+		(text "spike0" (rect 21 43 45 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "spike1" (rect 0 0 23 12)(font "Arial" ))
+		(text "spike1" (rect 21 59 44 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "spike2" (rect 0 0 24 12)(font "Arial" ))
+		(text "spike2" (rect 21 75 45 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "spike3" (rect 0 0 24 12)(font "Arial" ))
+		(text "spike3" (rect 21 91 45 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "spike4" (rect 0 0 25 12)(font "Arial" ))
+		(text "spike4" (rect 21 107 46 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "spike5" (rect 0 0 24 12)(font "Arial" ))
+		(text "spike5" (rect 21 123 45 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "spike6" (rect 0 0 24 12)(font "Arial" ))
+		(text "spike6" (rect 21 139 45 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "spike7" (rect 0 0 24 12)(font "Arial" ))
+		(text "spike7" (rect 21 155 45 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "spike8" (rect 0 0 24 12)(font "Arial" ))
+		(text "spike8" (rect 21 171 45 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "spike9" (rect 0 0 24 12)(font "Arial" ))
+		(text "spike9" (rect 21 187 45 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192)(line_width 1))
+	)
+	(port
+		(pt 192 32)
+		(output)
+		(text "done" (rect 0 0 18 12)(font "Arial" ))
+		(text "done" (rect 153 27 171 39)(font "Arial" ))
+		(line (pt 192 32)(pt 176 32)(line_width 1))
+	)
+	(port
+		(pt 192 48)
+		(output)
+		(text "outni0" (rect 0 0 22 12)(font "Arial" ))
+		(text "outni0" (rect 149 43 171 55)(font "Arial" ))
+		(line (pt 192 48)(pt 176 48)(line_width 1))
+	)
+	(port
+		(pt 192 64)
+		(output)
+		(text "outni1" (rect 0 0 21 12)(font "Arial" ))
+		(text "outni1" (rect 150 59 171 71)(font "Arial" ))
+		(line (pt 192 64)(pt 176 64)(line_width 1))
+	)
+	(port
+		(pt 192 80)
+		(output)
+		(text "outni2" (rect 0 0 22 12)(font "Arial" ))
+		(text "outni2" (rect 149 75 171 87)(font "Arial" ))
+		(line (pt 192 80)(pt 176 80)(line_width 1))
+	)
+	(port
+		(pt 192 96)
+		(output)
+		(text "outni3" (rect 0 0 22 12)(font "Arial" ))
+		(text "outni3" (rect 149 91 171 103)(font "Arial" ))
+		(line (pt 192 96)(pt 176 96)(line_width 1))
+	)
+	(port
+		(pt 192 112)
+		(output)
+		(text "outni4" (rect 0 0 23 12)(font "Arial" ))
+		(text "outni4" (rect 148 107 171 119)(font "Arial" ))
+		(line (pt 192 112)(pt 176 112)(line_width 1))
+	)
+	(port
+		(pt 192 128)
+		(output)
+		(text "outni5" (rect 0 0 22 12)(font "Arial" ))
+		(text "outni5" (rect 149 123 171 135)(font "Arial" ))
+		(line (pt 192 128)(pt 176 128)(line_width 1))
+	)
+	(port
+		(pt 192 144)
+		(output)
+		(text "outni6" (rect 0 0 22 12)(font "Arial" ))
+		(text "outni6" (rect 149 139 171 151)(font "Arial" ))
+		(line (pt 192 144)(pt 176 144)(line_width 1))
+	)
+	(port
+		(pt 192 160)
+		(output)
+		(text "outni7" (rect 0 0 22 12)(font "Arial" ))
+		(text "outni7" (rect 149 155 171 167)(font "Arial" ))
+		(line (pt 192 160)(pt 176 160)(line_width 1))
+	)
+	(port
+		(pt 192 176)
+		(output)
+		(text "outni8" (rect 0 0 22 12)(font "Arial" ))
+		(text "outni8" (rect 149 171 171 183)(font "Arial" ))
+		(line (pt 192 176)(pt 176 176)(line_width 1))
+	)
+	(port
+		(pt 192 192)
+		(output)
+		(text "outni9" (rect 0 0 22 12)(font "Arial" ))
+		(text "outni9" (rect 149 187 171 199)(font "Arial" ))
+		(line (pt 192 192)(pt 176 192)(line_width 1))
+	)
+	(port
+		(pt 192 208)
+		(output)
+		(text "sourceout0[11..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "sourceout0[11..0]" (rect 105 203 171 215)(font "Arial" ))
+		(line (pt 192 208)(pt 176 208)(line_width 3))
+	)
+	(port
+		(pt 192 224)
+		(output)
+		(text "sourceout1[11..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "sourceout1[11..0]" (rect 107 219 171 231)(font "Arial" ))
+		(line (pt 192 224)(pt 176 224)(line_width 3))
+	)
+	(port
+		(pt 192 240)
+		(output)
+		(text "sourceout2[11..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "sourceout2[11..0]" (rect 105 235 171 247)(font "Arial" ))
+		(line (pt 192 240)(pt 176 240)(line_width 3))
+	)
+	(port
+		(pt 192 256)
+		(output)
+		(text "sourceout3[11..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "sourceout3[11..0]" (rect 105 251 171 263)(font "Arial" ))
+		(line (pt 192 256)(pt 176 256)(line_width 3))
+	)
+	(port
+		(pt 192 272)
+		(output)
+		(text "sourceout4[11..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "sourceout4[11..0]" (rect 104 267 171 279)(font "Arial" ))
+		(line (pt 192 272)(pt 176 272)(line_width 3))
+	)
+	(port
+		(pt 192 288)
+		(output)
+		(text "sourceout5[11..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "sourceout5[11..0]" (rect 105 283 171 295)(font "Arial" ))
+		(line (pt 192 288)(pt 176 288)(line_width 3))
+	)
+	(port
+		(pt 192 304)
+		(output)
+		(text "sourceout6[11..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "sourceout6[11..0]" (rect 105 299 171 311)(font "Arial" ))
+		(line (pt 192 304)(pt 176 304)(line_width 3))
+	)
+	(port
+		(pt 192 320)
+		(output)
+		(text "sourceout7[11..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "sourceout7[11..0]" (rect 105 315 171 327)(font "Arial" ))
+		(line (pt 192 320)(pt 176 320)(line_width 3))
+	)
+	(port
+		(pt 192 336)
+		(output)
+		(text "sourceout8[11..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "sourceout8[11..0]" (rect 105 331 171 343)(font "Arial" ))
+		(line (pt 192 336)(pt 176 336)(line_width 3))
+	)
+	(port
+		(pt 192 352)
+		(output)
+		(text "sourceout9[11..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "sourceout9[11..0]" (rect 105 347 171 359)(font "Arial" ))
+		(line (pt 192 352)(pt 176 352)(line_width 3))
+	)
+	(parameter
+		"number_of_units"
+		"10"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"number_of_address_bits"
+		"12"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"connection_pointer_initialization_width"
+		""
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"number_of_neurons"
+		"10"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"number_of_connections_downstream"
+		"3"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"downstream_connections_initialization_width"
+		""
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"neuron_address_initialization_width"
+		""
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 176 384)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 208 -64 308 16))
+)

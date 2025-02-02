@@ -1,0 +1,134 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 328 256)
+	(text "potential_decay25" (rect 5 0 75 12)(font "Arial" ))
+	(text "inst" (rect 8 224 20 236)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "set_decay25" (rect 0 0 51 12)(font "Arial" ))
+		(text "set_decay25" (rect 21 27 72 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clear_decay25" (rect 0 0 59 12)(font "Arial" ))
+		(text "clear_decay25" (rect 21 43 80 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "new_potential25[31..0]" (rect 0 0 84 12)(font "Arial" ))
+		(text "new_potential25[31..0]" (rect 21 59 105 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 312 32)
+		(output)
+		(text "output_potential_decay25[31..0]" (rect 0 0 123 12)(font "Arial" ))
+		(text "output_potential_decay25[31..0]" (rect 168 27 291 39)(font "Arial" ))
+		(line (pt 312 32)(pt 296 32)(line_width 3))
+	)
+	(port
+		(pt 312 48)
+		(output)
+		(text "decayoutput0" (rect 0 0 53 12)(font "Arial" ))
+		(text "decayoutput0" (rect 238 43 291 55)(font "Arial" ))
+		(line (pt 312 48)(pt 296 48)(line_width 1))
+	)
+	(port
+		(pt 312 64)
+		(output)
+		(text "decayoutput1" (rect 0 0 51 12)(font "Arial" ))
+		(text "decayoutput1" (rect 240 59 291 71)(font "Arial" ))
+		(line (pt 312 64)(pt 296 64)(line_width 1))
+	)
+	(port
+		(pt 312 80)
+		(output)
+		(text "decayoutput2" (rect 0 0 53 12)(font "Arial" ))
+		(text "decayoutput2" (rect 238 75 291 87)(font "Arial" ))
+		(line (pt 312 80)(pt 296 80)(line_width 1))
+	)
+	(port
+		(pt 312 96)
+		(output)
+		(text "decayoutput3" (rect 0 0 53 12)(font "Arial" ))
+		(text "decayoutput3" (rect 238 91 291 103)(font "Arial" ))
+		(line (pt 312 96)(pt 296 96)(line_width 1))
+	)
+	(port
+		(pt 312 112)
+		(output)
+		(text "decayoutput4" (rect 0 0 54 12)(font "Arial" ))
+		(text "decayoutput4" (rect 237 107 291 119)(font "Arial" ))
+		(line (pt 312 112)(pt 296 112)(line_width 1))
+	)
+	(port
+		(pt 312 128)
+		(output)
+		(text "decayoutput5" (rect 0 0 53 12)(font "Arial" ))
+		(text "decayoutput5" (rect 238 123 291 135)(font "Arial" ))
+		(line (pt 312 128)(pt 296 128)(line_width 1))
+	)
+	(port
+		(pt 312 144)
+		(output)
+		(text "decayoutput6" (rect 0 0 53 12)(font "Arial" ))
+		(text "decayoutput6" (rect 238 139 291 151)(font "Arial" ))
+		(line (pt 312 144)(pt 296 144)(line_width 1))
+	)
+	(port
+		(pt 312 160)
+		(output)
+		(text "decayoutput7" (rect 0 0 53 12)(font "Arial" ))
+		(text "decayoutput7" (rect 238 155 291 167)(font "Arial" ))
+		(line (pt 312 160)(pt 296 160)(line_width 1))
+	)
+	(port
+		(pt 312 176)
+		(output)
+		(text "decayoutput8" (rect 0 0 53 12)(font "Arial" ))
+		(text "decayoutput8" (rect 238 171 291 183)(font "Arial" ))
+		(line (pt 312 176)(pt 296 176)(line_width 1))
+	)
+	(port
+		(pt 312 192)
+		(output)
+		(text "decayoutput9" (rect 0 0 53 12)(font "Arial" ))
+		(text "decayoutput9" (rect 238 187 291 199)(font "Arial" ))
+		(line (pt 312 192)(pt 296 192)(line_width 1))
+	)
+	(port
+		(pt 312 208)
+		(output)
+		(text "done" (rect 0 0 18 12)(font "Arial" ))
+		(text "done" (rect 273 203 291 215)(font "Arial" ))
+		(line (pt 312 208)(pt 296 208)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 296 224)(line_width 1))
+	)
+)

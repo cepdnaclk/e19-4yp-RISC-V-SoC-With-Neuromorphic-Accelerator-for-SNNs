@@ -1,0 +1,612 @@
+Analysis & Synthesis report for TopLevel
+Sat Jan 11 09:17:35 2025
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Sat Jan 11 09:17:35 2025          ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; TopLevel                                   ;
+; Top-level Entity Name              ; TopLevel                                   ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; N/A until Partition Merge                  ;
+;     Total combinational functions  ; N/A until Partition Merge                  ;
+;     Dedicated logic registers      ; N/A until Partition Merge                  ;
+; Total registers                    ; N/A until Partition Merge                  ;
+; Total pins                         ; N/A until Partition Merge                  ;
+; Total virtual pins                 ; N/A until Partition Merge                  ;
+; Total memory bits                  ; N/A until Partition Merge                  ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
+; Total PLLs                         ; N/A until Partition Merge                  ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; TopLevel           ; TopLevel           ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Sat Jan 11 09:17:31 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TopLevel -c TopLevel
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 6 design units, including 6 entities, in source file /education/academic/projects/fyp/codes/neuromorphic-noc/code/accelerator/src/accelerator_tb.v
+    Info (12023): Found entity 1: priority_encoder
+    Info (12023): Found entity 2: Addition_Subtraction
+    Info (12023): Found entity 3: Multiplication
+    Info (12023): Found entity 4: network_interface
+    Info (12023): Found entity 5: accelerator
+    Info (12023): Found entity 6: accelerator_tb
+Warning (10463): Verilog HDL Declaration warning at mac.v(33): "break" is SystemVerilog-2005 keyword
+Info (12021): Found 6 design units, including 6 entities, in source file /education/academic/projects/fyp/codes/neuromorphic-noc/fpga/test_code/adder.v
+    Info (12023): Found entity 1: potential_decay
+    Info (12023): Found entity 2: mac
+    Info (12023): Found entity 3: comparator
+    Info (12023): Found entity 4: potential_adder
+    Info (12023): Found entity 5: neuron
+    Info (12023): Found entity 6: adder_4bit
+Info (12021): Found 1 design units, including 1 entities, in source file toplevel.bdf
+    Info (12023): Found entity 1: TopLevel
+Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
+Info (12128): Elaborating entity "adder_4bit" for hierarchy "adder_4bit:inst"
+Info (12128): Elaborating entity "accelerator_tb" for hierarchy "accelerator_tb:inst3"
+Warning (10755): Verilog HDL warning at accelerator_tb.v(185): assignments to CLK create a combinational loop
+Warning (10230): Verilog HDL assignment warning at accelerator_tb.v(193): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "accelerator" for hierarchy "accelerator_tb:inst3|accelerator:acc"
+Warning (10240): Verilog HDL Always Construct warning at accelerator.v(87): inferring latch(es) for variable "source_addresses_reg", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "source_addresses_reg[0]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[1]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[2]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[3]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[4]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[5]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[6]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[7]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[8]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[9]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[10]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[11]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[12]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[13]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[14]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[15]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[16]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[17]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[18]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[19]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[20]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[21]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[22]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[23]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[24]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[25]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[26]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[27]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[28]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[29]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[30]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[31]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[32]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[33]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[34]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[35]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[36]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[37]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[38]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[39]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[40]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[41]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[42]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[43]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[44]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[45]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[46]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[47]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[48]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[49]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[50]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[51]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[52]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[53]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[54]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[55]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[56]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[57]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[58]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[59]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[60]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[61]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[62]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[63]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[64]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[65]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[66]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[67]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[68]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[69]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[70]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[71]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[72]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[73]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[74]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[75]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[76]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[77]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[78]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[79]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[80]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[81]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[82]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[83]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[84]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[85]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[86]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[87]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[88]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[89]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[90]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[91]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[92]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[93]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[94]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[95]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[96]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[97]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[98]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[99]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[100]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[101]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[102]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[103]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[104]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[105]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[106]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[107]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[108]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[109]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[110]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[111]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[112]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[113]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[114]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[115]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[116]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[117]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[118]" at accelerator.v(87)
+Info (10041): Inferred latch for "source_addresses_reg[119]" at accelerator.v(87)
+Info (12128): Elaborating entity "neuron" for hierarchy "accelerator_tb:inst3|accelerator:acc|neuron:gen_neuron_loop[0].n"
+Info (12128): Elaborating entity "potential_decay" for hierarchy "accelerator_tb:inst3|accelerator:acc|neuron:gen_neuron_loop[0].n|potential_decay:pd"
+Warning (10858): Verilog HDL warning at potential_decay.v(44): object output_potential_decay_izhi used but never assigned
+Warning (10235): Verilog HDL Always Construct warning at potential_decay.v(81): variable "membrane_potential" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at potential_decay.v(82): variable "membrane_potential" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at potential_decay.v(83): variable "membrane_potential" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at potential_decay.v(85): variable "decay_rate" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at potential_decay.v(89): truncated value with size 33 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at potential_decay.v(94): truncated value with size 33 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at potential_decay.v(99): truncated value with size 33 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at potential_decay.v(104): truncated value with size 33 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at potential_decay.v(110): truncated value with size 33 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at potential_decay.v(111): truncated value with size 33 to match size of target (32)
+Warning (10235): Verilog HDL Always Construct warning at potential_decay.v(112): variable "result_divide_by_2_plus_4" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at potential_decay.v(117): truncated value with size 33 to match size of target (32)
+Warning (10240): Verilog HDL Always Construct warning at potential_decay.v(78): inferring latch(es) for variable "sign", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at potential_decay.v(78): inferring latch(es) for variable "exponent", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at potential_decay.v(78): inferring latch(es) for variable "mantissa", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at potential_decay.v(78): inferring latch(es) for variable "adjusted_exponent", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at potential_decay.v(78): inferring latch(es) for variable "output_potential_decay_LIF", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at potential_decay.v(78): inferring latch(es) for variable "exponent_divided_by_2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at potential_decay.v(78): inferring latch(es) for variable "exponent_divided_by_4", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at potential_decay.v(78): inferring latch(es) for variable "number_divided_by_2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at potential_decay.v(78): inferring latch(es) for variable "number_divided_by_4", which holds its previous value in one or more paths through the always construct
+Warning (10235): Verilog HDL Always Construct warning at potential_decay.v(125): variable "model" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10030): Net "output_potential_decay_izhi" at potential_decay.v(44) has no driver or initial value, using a default initial value '0'
+Info (10041): Inferred latch for "number_divided_by_4[0]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[1]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[2]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[3]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[4]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[5]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[6]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[7]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[8]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[9]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[10]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[11]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[12]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[13]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[14]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[15]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[16]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[17]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[18]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[19]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[20]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[21]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[22]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[23]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[24]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[25]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[26]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[27]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[28]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[29]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[30]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_4[31]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[0]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[1]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[2]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[3]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[4]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[5]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[6]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[7]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[8]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[9]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[10]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[11]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[12]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[13]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[14]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[15]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[16]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[17]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[18]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[19]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[20]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[21]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[22]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[23]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[24]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[25]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[26]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[27]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[28]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[29]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[30]" at potential_decay.v(80)
+Info (10041): Inferred latch for "number_divided_by_2[31]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[0]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[1]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[2]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[3]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[4]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[5]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[6]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[7]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[8]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[9]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[10]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[11]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[12]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[13]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[14]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[15]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[16]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[17]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[18]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[19]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[20]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[21]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[22]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[23]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[24]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[25]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[26]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[27]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[28]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[29]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[30]" at potential_decay.v(80)
+Info (10041): Inferred latch for "output_potential_decay_LIF[31]" at potential_decay.v(80)
+Info (12128): Elaborating entity "Addition_Subtraction" for hierarchy "accelerator_tb:inst3|accelerator:acc|neuron:gen_neuron_loop[0].n|potential_decay:pd|Addition_Subtraction:Addition_Subtraction_1"
+Info (12128): Elaborating entity "priority_encoder" for hierarchy "accelerator_tb:inst3|accelerator:acc|neuron:gen_neuron_loop[0].n|potential_decay:pd|Addition_Subtraction:Addition_Subtraction_1|priority_encoder:pe"
+Info (12128): Elaborating entity "Multiplication" for hierarchy "accelerator_tb:inst3|accelerator:acc|neuron:gen_neuron_loop[0].n|potential_decay:pd|Multiplication:Multiplication_v_squared"
+Info (12128): Elaborating entity "mac" for hierarchy "accelerator_tb:inst3|accelerator:acc|neuron:gen_neuron_loop[0].n|mac:m"
+Warning (10036): Verilog HDL or VHDL warning at mac.v(33): object "break" assigned a value but never read
+Warning (10240): Verilog HDL Always Construct warning at mac.v(64): inferring latch(es) for variable "index", which holds its previous value in one or more paths through the always construct
+Warning (10235): Verilog HDL Always Construct warning at mac.v(94): variable "added_weight" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at mac.v(79): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at mac.v(78): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at mac.v(78): inferring latch(es) for variable "accumulated_weight", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at mac.v(78): inferring latch(es) for variable "considered_weight", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "considered_weight[0]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[1]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[2]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[3]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[4]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[5]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[6]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[7]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[8]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[9]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[10]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[11]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[12]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[13]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[14]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[15]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[16]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[17]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[18]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[19]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[20]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[21]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[22]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[23]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[24]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[25]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[26]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[27]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[28]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[29]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[30]" at mac.v(78)
+Info (10041): Inferred latch for "considered_weight[31]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[0]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[1]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[2]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[3]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[4]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[5]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[6]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[7]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[8]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[9]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[10]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[11]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[12]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[13]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[14]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[15]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[16]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[17]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[18]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[19]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[20]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[21]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[22]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[23]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[24]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[25]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[26]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[27]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[28]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[29]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[30]" at mac.v(78)
+Info (10041): Inferred latch for "accumulated_weight[31]" at mac.v(78)
+Info (10041): Inferred latch for "incoming_spikes[4]" at mac.v(64)
+Info (10041): Inferred latch for "incoming_spikes[3]" at mac.v(64)
+Info (10041): Inferred latch for "incoming_spikes[2]" at mac.v(64)
+Info (10041): Inferred latch for "incoming_spikes[1]" at mac.v(64)
+Info (10041): Inferred latch for "incoming_spikes[0]" at mac.v(64)
+Info (10041): Inferred latch for "index[0]" at mac.v(69)
+Info (10041): Inferred latch for "index[1]" at mac.v(69)
+Info (10041): Inferred latch for "index[2]" at mac.v(69)
+Info (10041): Inferred latch for "index[3]" at mac.v(69)
+Info (10041): Inferred latch for "index[4]" at mac.v(69)
+Info (10041): Inferred latch for "index[5]" at mac.v(69)
+Info (10041): Inferred latch for "index[6]" at mac.v(69)
+Info (10041): Inferred latch for "index[7]" at mac.v(69)
+Info (10041): Inferred latch for "index[8]" at mac.v(69)
+Info (10041): Inferred latch for "index[9]" at mac.v(69)
+Info (10041): Inferred latch for "index[10]" at mac.v(69)
+Info (10041): Inferred latch for "index[11]" at mac.v(69)
+Info (10041): Inferred latch for "index[12]" at mac.v(69)
+Info (10041): Inferred latch for "index[13]" at mac.v(69)
+Info (10041): Inferred latch for "index[14]" at mac.v(69)
+Info (10041): Inferred latch for "index[15]" at mac.v(69)
+Info (10041): Inferred latch for "index[16]" at mac.v(69)
+Info (10041): Inferred latch for "index[17]" at mac.v(69)
+Info (10041): Inferred latch for "index[18]" at mac.v(69)
+Info (10041): Inferred latch for "index[19]" at mac.v(69)
+Info (10041): Inferred latch for "index[20]" at mac.v(69)
+Info (10041): Inferred latch for "index[21]" at mac.v(69)
+Info (10041): Inferred latch for "index[22]" at mac.v(69)
+Info (10041): Inferred latch for "index[23]" at mac.v(69)
+Info (10041): Inferred latch for "index[24]" at mac.v(69)
+Info (10041): Inferred latch for "index[25]" at mac.v(69)
+Info (10041): Inferred latch for "index[26]" at mac.v(69)
+Info (10041): Inferred latch for "index[27]" at mac.v(69)
+Info (10041): Inferred latch for "index[28]" at mac.v(69)
+Info (10041): Inferred latch for "index[29]" at mac.v(69)
+Info (10041): Inferred latch for "index[30]" at mac.v(69)
+Info (10041): Inferred latch for "index[31]" at mac.v(69)
+Info (12128): Elaborating entity "potential_adder" for hierarchy "accelerator_tb:inst3|accelerator:acc|neuron:gen_neuron_loop[0].n|potential_adder:pa"
+Warning (10235): Verilog HDL Always Construct warning at potential_adder.v(112): variable "model" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at potential_adder.v(123): variable "reset_value" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at potential_adder.v(138): variable "c" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at potential_adder.v(139): variable "u_plus_d" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at potential_adder.v(155): variable "reset_value_Q" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at potential_adder.v(110): inferring latch(es) for variable "spike", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at potential_adder.v(110): inferring latch(es) for variable "u", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "u[0]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[1]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[2]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[3]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[4]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[5]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[6]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[7]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[8]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[9]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[10]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[11]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[12]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[13]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[14]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[15]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[16]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[17]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[18]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[19]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[20]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[21]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[22]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[23]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[24]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[25]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[26]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[27]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[28]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[29]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[30]" at potential_adder.v(110)
+Info (10041): Inferred latch for "u[31]" at potential_adder.v(110)
+Info (10041): Inferred latch for "spike" at potential_adder.v(110)
+Info (12128): Elaborating entity "comparator" for hierarchy "accelerator_tb:inst3|accelerator:acc|neuron:gen_neuron_loop[0].n|potential_adder:pa|comparator:comparator_2"
+Info (12128): Elaborating entity "network_interface" for hierarchy "accelerator_tb:inst3|accelerator:acc|network_interface:ni1"
+Warning (10235): Verilog HDL Always Construct warning at network_interface.v(109): variable "check" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at network_interface.v(113): truncated value with size 32 to match size of target (5)
+Error (10119): Verilog HDL Loop Statement error at network_interface.v(113): loop with non-constant loop condition must terminate within 250 iterations File: e:/education/academic/projects/fyp/codes/neuromorphic-noc/code/accelerator/src/network_interface/network_interface.v Line: 113
+Warning (10230): Verilog HDL assignment warning at network_interface.v(111): truncated value with size 32 to match size of target (5)
+Warning (10755): Verilog HDL warning at network_interface.v(96): assignments to check create a combinational loop
+Warning (10240): Verilog HDL Always Construct warning at network_interface.v(96): inferring latch(es) for variable "j", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at network_interface.v(96): inferring latch(es) for variable "packet", which holds its previous value in one or more paths through the always construct
+Error (12152): Can't elaborate user hierarchy "accelerator_tb:inst3|accelerator:acc|network_interface:ni1" File: e:/education/academic/projects/fyp/codes/neuromorphic-noc/code/accelerator/src/accelerator.v Line: 84
+Info (144001): Generated suppressed messages file E:/Education/Academic/Projects/fyp/Codes/Neuromorphic-NoC/fpga/accelerator_test/output_files/TopLevel.map.smsg
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 48 warnings
+    Error: Peak virtual memory: 4684 megabytes
+    Error: Processing ended: Sat Jan 11 09:17:36 2025
+    Error: Elapsed time: 00:00:05
+    Error: Total CPU time (on all processors): 00:00:04
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/Education/Academic/Projects/fyp/Codes/Neuromorphic-NoC/fpga/accelerator_test/output_files/TopLevel.map.smsg.
+
+

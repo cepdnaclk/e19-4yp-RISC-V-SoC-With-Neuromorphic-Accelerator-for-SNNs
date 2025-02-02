@@ -1,0 +1,313 @@
+$date
+	Fri Jun 14 11:52:22 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module mac_TESTBENCH $end
+$var reg 1 ! CLK $end
+$var reg 4 " CLK_count [3:0] $end
+$var reg 1 # clear $end
+$var reg 1 $ done $end
+$scope begin genblk1[0] $end
+$var parameter 2 % i $end
+$scope module m $end
+$var wire 1 ! CLK $end
+$var wire 1 # clear $end
+$var wire 12 & neuron_address [11:0] $end
+$var wire 12 ' source_address [11:0] $end
+$var wire 60 ( source_addresses_array [59:0] $end
+$var wire 160 ) weights_array [159:0] $end
+$var wire 1 * excpetion $end
+$var wire 32 + added_weight [31:0] $end
+$var parameter 32 , number_of_address_bits $end
+$var parameter 32 - number_of_connections $end
+$var parameter 32 . number_of_units $end
+$var parameter 64 / weights_array_width $end
+$var reg 32 0 accumulated_weight [31:0] $end
+$var reg 1 1 break $end
+$var reg 32 2 considered_weight [31:0] $end
+$var reg 1 3 flip $end
+$var reg 32 4 mult_output [31:0] $end
+$var integer 32 5 i [31:0] $end
+$var integer 32 6 index [31:0] $end
+$scope module add1 $end
+$var wire 1 7 AddBar_Sub $end
+$var wire 1 * Exception $end
+$var wire 32 8 a_operand [31:0] $end
+$var wire 32 9 b_operand [31:0] $end
+$var wire 1 : operation_sub_addBar $end
+$var wire 1 ; output_sign $end
+$var wire 25 < subtraction_diff [24:0] $end
+$var wire 31 = sub_diff [30:0] $end
+$var wire 24 > significand_sub_complement [23:0] $end
+$var wire 25 ? significand_sub [24:0] $end
+$var wire 24 @ significand_b_add_sub [23:0] $end
+$var wire 24 A significand_b [23:0] $end
+$var wire 25 B significand_add [24:0] $end
+$var wire 24 C significand_a [23:0] $end
+$var wire 32 D result [31:0] $end
+$var wire 1 E perform $end
+$var wire 32 F operand_b [31:0] $end
+$var wire 32 G operand_a [31:0] $end
+$var wire 8 H exponent_sub [7:0] $end
+$var wire 8 I exponent_diff [7:0] $end
+$var wire 8 J exponent_b_add_sub [7:0] $end
+$var wire 31 K add_sum [30:0] $end
+$var wire 1 L Comp_enable $end
+$scope module pe $end
+$var wire 8 M Exponent_a [7:0] $end
+$var wire 25 N significand [24:0] $end
+$var wire 8 O Exponent_sub [7:0] $end
+$var reg 25 P Significand [24:0] $end
+$var reg 5 Q shift [4:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10100000 /
+b1010 .
+b101 -
+b1100 ,
+b0 %
+$end
+#0
+$dumpvars
+bx Q
+bx P
+bx O
+bx N
+bx M
+xL
+bx K
+bx J
+bx I
+bx H
+bx G
+bx F
+xE
+bx D
+bx C
+bx B
+bx A
+bx @
+bx ?
+bx >
+bx =
+bx <
+x;
+x:
+bx 9
+bx 8
+07
+bx 6
+b101 5
+bx 4
+03
+bx 2
+01
+bx 0
+bx +
+x*
+b100001010010000101100110011001101000001100101110101110000101001010000100100011100001010001111010000000000000000000000000000000001000010101011100011100001010010 )
+b11000000000100000000000101000000000110000000000111 (
+bx '
+b0 &
+0$
+0#
+b0 "
+0!
+$end
+#40
+b1 "
+1!
+#80
+0!
+#120
+b10 "
+1!
+#160
+0!
+#200
+b11 "
+1!
+#240
+0!
+#280
+b0 =
+b0 H
+b0 O
+b0 Q
+b0 <
+b0 P
+b0 ?
+b0 N
+b0 >
+b0 4
+b0 B
+b0 +
+b0 D
+1:
+b0 @
+b0 A
+0*
+b0 C
+b0 K
+0L
+1E
+b0 J
+b0 I
+0;
+b0 M
+b0 F
+b0 G
+b0 2
+b0 9
+b0 0
+b0 8
+b101 5
+13
+1#
+b0 "
+1!
+#320
+0!
+#360
+0#
+b1 "
+1!
+#400
+b0 6
+b101 5
+0!
+b11 '
+#440
+b10 "
+1!
+#480
+0!
+#520
+b11 "
+1!
+#560
+0!
+#600
+b0 5
+03
+1#
+b0 "
+1!
+#610
+b1000010100100001011001100110011 4
+b1011011110100110011001101 <
+b1011011110100110011001101 P
+b1000010100100001011001100110011 +
+b1000010100100001011001100110011 D
+b100100001011001100110011 B
+b100100001011001100110011 ?
+b100100001011001100110011 N
+b100100001011001100110011 C
+b1000010100100001011001100110011 K
+b0 @
+b1000010111011110100110011001101 =
+b10000101 H
+b10000101 O
+b10000101 M
+b0 A
+b1000010100100001011001100110011 G
+1L
+b10000101 I
+1E
+b10000101 J
+b0 F
+b101 5
+b1000010100100001011001100110011 2
+b1000010100100001011001100110011 9
+#640
+0!
+#680
+0#
+b1 "
+1!
+#720
+0!
+#760
+b10 "
+1!
+#800
+0!
+#840
+b11 "
+1!
+#880
+0!
+#920
+b0 4
+b0 <
+b0 P
+b0 +
+b0 D
+b0 B
+b0 ?
+b0 N
+b0 C
+b0 K
+0L
+b0 J
+b0 I
+1E
+b0 =
+b0 H
+b0 O
+b0 M
+b0 G
+b0 2
+b0 9
+b101 5
+13
+1#
+b0 "
+1!
+#960
+0!
+#1000
+0#
+b1 "
+1!
+#1040
+0!
+#1080
+b10 "
+1!
+#1120
+0!
+#1160
+b11 "
+1!
+#1200
+0!
+#1240
+b101 5
+03
+1#
+b0 "
+1!
+#1280
+0!
+#1320
+0#
+b1 "
+1!
+#1360
+0!
+#1400
+b10 "
+1!
+1$

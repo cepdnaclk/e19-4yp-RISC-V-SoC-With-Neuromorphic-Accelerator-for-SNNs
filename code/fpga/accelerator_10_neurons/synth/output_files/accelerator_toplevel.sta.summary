@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'mac0:inst|clear'
+Slack : -46.912
+TNS   : -5134.855
+
+Type  : Slow 1200mV 85C Model Setup 'input_clock'
+Slack : -5.687
+TNS   : -141.931
+
+Type  : Slow 1200mV 85C Model Hold 'mac0:inst|clear'
+Slack : -0.623
+TNS   : -1.547
+
+Type  : Slow 1200mV 85C Model Hold 'input_clock'
+Slack : 0.036
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'mac0:inst|clear'
+Slack : -4.407
+TNS   : -8.608
+
+Type  : Slow 1200mV 85C Model Removal 'mac0:inst|clear'
+Slack : 3.684
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'input_clock'
+Slack : -3.000
+TNS   : -89.095
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mac0:inst|clear'
+Slack : 0.372
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'mac0:inst|clear'
+Slack : -42.645
+TNS   : -4669.904
+
+Type  : Slow 1200mV 0C Model Setup 'input_clock'
+Slack : -5.093
+TNS   : -120.594
+
+Type  : Slow 1200mV 0C Model Hold 'mac0:inst|clear'
+Slack : -0.459
+TNS   : -1.122
+
+Type  : Slow 1200mV 0C Model Hold 'input_clock'
+Slack : 0.105
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'mac0:inst|clear'
+Slack : -3.980
+TNS   : -7.791
+
+Type  : Slow 1200mV 0C Model Removal 'mac0:inst|clear'
+Slack : 3.462
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'input_clock'
+Slack : -3.000
+TNS   : -89.095
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mac0:inst|clear'
+Slack : 0.367
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'mac0:inst|clear'
+Slack : -23.052
+TNS   : -2492.521
+
+Type  : Fast 1200mV 0C Model Setup 'input_clock'
+Slack : -2.250
+TNS   : -37.208
+
+Type  : Fast 1200mV 0C Model Hold 'mac0:inst|clear'
+Slack : -0.508
+TNS   : -1.102
+
+Type  : Fast 1200mV 0C Model Hold 'input_clock'
+Slack : -0.213
+TNS   : -0.213
+
+Type  : Fast 1200mV 0C Model Recovery 'mac0:inst|clear'
+Slack : -2.109
+TNS   : -4.110
+
+Type  : Fast 1200mV 0C Model Removal 'mac0:inst|clear'
+Slack : 2.167
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'input_clock'
+Slack : -3.000
+TNS   : -73.928
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mac0:inst|clear'
+Slack : 0.225
+TNS   : 0.000
+
+------------------------------------------------------------

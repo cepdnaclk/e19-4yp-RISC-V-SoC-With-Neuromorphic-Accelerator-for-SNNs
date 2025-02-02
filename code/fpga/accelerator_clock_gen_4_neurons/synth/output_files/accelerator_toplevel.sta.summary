@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clock_generator:inst|done'
+Slack : -47.683
+TNS   : -4706.707
+
+Type  : Slow 1200mV 85C Model Setup 'input_clock'
+Slack : -5.033
+TNS   : -150.408
+
+Type  : Slow 1200mV 85C Model Hold 'clock_generator:inst|done'
+Slack : -1.982
+TNS   : -26.040
+
+Type  : Slow 1200mV 85C Model Hold 'input_clock'
+Slack : -0.074
+TNS   : -0.074
+
+Type  : Slow 1200mV 85C Model Recovery 'clock_generator:inst|done'
+Slack : -3.411
+TNS   : -18.039
+
+Type  : Slow 1200mV 85C Model Removal 'clock_generator:inst|done'
+Slack : 2.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'input_clock'
+Slack : -3.000
+TNS   : -89.095
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_generator:inst|done'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clock_generator:inst|done'
+Slack : -43.519
+TNS   : -4281.158
+
+Type  : Slow 1200mV 0C Model Setup 'input_clock'
+Slack : -4.484
+TNS   : -128.242
+
+Type  : Slow 1200mV 0C Model Hold 'clock_generator:inst|done'
+Slack : -1.750
+TNS   : -22.589
+
+Type  : Slow 1200mV 0C Model Hold 'input_clock'
+Slack : 0.013
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clock_generator:inst|done'
+Slack : -3.146
+TNS   : -16.695
+
+Type  : Slow 1200mV 0C Model Removal 'clock_generator:inst|done'
+Slack : 2.258
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'input_clock'
+Slack : -3.000
+TNS   : -89.095
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_generator:inst|done'
+Slack : 0.321
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clock_generator:inst|done'
+Slack : -23.153
+TNS   : -2242.323
+
+Type  : Fast 1200mV 0C Model Setup 'input_clock'
+Slack : -1.985
+TNS   : -40.981
+
+Type  : Fast 1200mV 0C Model Hold 'clock_generator:inst|done'
+Slack : -1.063
+TNS   : -18.357
+
+Type  : Fast 1200mV 0C Model Hold 'input_clock'
+Slack : -0.253
+TNS   : -0.253
+
+Type  : Fast 1200mV 0C Model Recovery 'clock_generator:inst|done'
+Slack : -1.586
+TNS   : -8.158
+
+Type  : Fast 1200mV 0C Model Removal 'clock_generator:inst|done'
+Slack : 1.392
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'input_clock'
+Slack : -3.000
+TNS   : -74.074
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_generator:inst|done'
+Slack : 0.165
+TNS   : 0.000
+
+------------------------------------------------------------

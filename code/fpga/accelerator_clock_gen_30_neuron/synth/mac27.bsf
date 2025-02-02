@@ -1,0 +1,155 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 296 256)
+	(text "mac27" (rect 5 0 32 12)(font "Arial" ))
+	(text "inst" (rect 8 224 20 236)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "set_mac27" (rect 0 0 44 12)(font "Arial" ))
+		(text "set_mac27" (rect 21 27 65 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clear_mac27" (rect 0 0 51 12)(font "Arial" ))
+		(text "clear_mac27" (rect 21 43 72 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "source_address27[11..0]" (rect 0 0 96 12)(font "Arial" ))
+		(text "source_address27[11..0]" (rect 21 59 117 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 280 32)
+		(output)
+		(text "mult_output27[31..0]" (rect 0 0 79 12)(font "Arial" ))
+		(text "mult_output27[31..0]" (rect 180 27 259 39)(font "Arial" ))
+		(line (pt 280 32)(pt 264 32)(line_width 3))
+	)
+	(port
+		(pt 280 48)
+		(output)
+		(text "macoutput190" (rect 0 0 54 12)(font "Arial" ))
+		(text "macoutput190" (rect 205 43 259 55)(font "Arial" ))
+		(line (pt 280 48)(pt 264 48)(line_width 1))
+	)
+	(port
+		(pt 280 64)
+		(output)
+		(text "macoutput191" (rect 0 0 53 12)(font "Arial" ))
+		(text "macoutput191" (rect 206 59 259 71)(font "Arial" ))
+		(line (pt 280 64)(pt 264 64)(line_width 1))
+	)
+	(port
+		(pt 280 80)
+		(output)
+		(text "macoutput192" (rect 0 0 54 12)(font "Arial" ))
+		(text "macoutput192" (rect 205 75 259 87)(font "Arial" ))
+		(line (pt 280 80)(pt 264 80)(line_width 1))
+	)
+	(port
+		(pt 280 96)
+		(output)
+		(text "macoutput193" (rect 0 0 54 12)(font "Arial" ))
+		(text "macoutput193" (rect 205 91 259 103)(font "Arial" ))
+		(line (pt 280 96)(pt 264 96)(line_width 1))
+	)
+	(port
+		(pt 280 112)
+		(output)
+		(text "macoutput194" (rect 0 0 55 12)(font "Arial" ))
+		(text "macoutput194" (rect 204 107 259 119)(font "Arial" ))
+		(line (pt 280 112)(pt 264 112)(line_width 1))
+	)
+	(port
+		(pt 280 128)
+		(output)
+		(text "macoutput195" (rect 0 0 54 12)(font "Arial" ))
+		(text "macoutput195" (rect 205 123 259 135)(font "Arial" ))
+		(line (pt 280 128)(pt 264 128)(line_width 1))
+	)
+	(port
+		(pt 280 144)
+		(output)
+		(text "macoutput196" (rect 0 0 54 12)(font "Arial" ))
+		(text "macoutput196" (rect 205 139 259 151)(font "Arial" ))
+		(line (pt 280 144)(pt 264 144)(line_width 1))
+	)
+	(port
+		(pt 280 160)
+		(output)
+		(text "macoutput197" (rect 0 0 54 12)(font "Arial" ))
+		(text "macoutput197" (rect 205 155 259 167)(font "Arial" ))
+		(line (pt 280 160)(pt 264 160)(line_width 1))
+	)
+	(port
+		(pt 280 176)
+		(output)
+		(text "macoutput198" (rect 0 0 54 12)(font "Arial" ))
+		(text "macoutput198" (rect 205 171 259 183)(font "Arial" ))
+		(line (pt 280 176)(pt 264 176)(line_width 1))
+	)
+	(port
+		(pt 280 192)
+		(output)
+		(text "macoutput199" (rect 0 0 54 12)(font "Arial" ))
+		(text "macoutput199" (rect 205 187 259 199)(font "Arial" ))
+		(line (pt 280 192)(pt 264 192)(line_width 1))
+	)
+	(port
+		(pt 280 208)
+		(output)
+		(text "done" (rect 0 0 18 12)(font "Arial" ))
+		(text "done" (rect 241 203 259 215)(font "Arial" ))
+		(line (pt 280 208)(pt 264 208)(line_width 1))
+	)
+	(parameter
+		"number_of_connections"
+		"5"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"number_of_address_bits"
+		"12"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"number_of_units"
+		"10"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"weights_array_width"
+		""
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 264 224)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 296 -64 396 16))
+)

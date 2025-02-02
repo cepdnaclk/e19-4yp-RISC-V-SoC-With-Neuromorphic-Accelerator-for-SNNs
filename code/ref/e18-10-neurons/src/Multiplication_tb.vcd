@@ -1,0 +1,112 @@
+$date
+	Mon May 27 16:42:09 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module Multiplication_tb $end
+$var wire 32 ! result [31:0] $end
+$var wire 1 " Underflow $end
+$var wire 1 # Overflow $end
+$var wire 1 $ Exception $end
+$var reg 1 % CLK $end
+$var reg 32 & a_operand [31:0] $end
+$var reg 32 ' b_operand [31:0] $end
+$scope module Multiplication $end
+$var wire 1 $ Exception $end
+$var wire 1 # Overflow $end
+$var wire 32 ( a_operand [31:0] $end
+$var wire 32 ) b_operand [31:0] $end
+$var wire 1 * sign $end
+$var wire 1 + zero $end
+$var wire 9 , sum_exponent [8:0] $end
+$var wire 32 - result [31:0] $end
+$var wire 1 . product_round $end
+$var wire 48 / product_normalised [47:0] $end
+$var wire 23 0 product_mantissa [22:0] $end
+$var wire 48 1 product [47:0] $end
+$var wire 24 2 operand_b [23:0] $end
+$var wire 24 3 operand_a [23:0] $end
+$var wire 1 4 normalised $end
+$var wire 9 5 exponent [8:0] $end
+$var wire 1 " Underflow $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10000011 5
+04
+b101000000000000000000000 3
+b101000000000000000000000 2
+b11001000000000000000000000000000000000000000000 1
+b10010000000000000000000 0
+b110010000000000000000000000000000000000000000000 /
+0.
+b1000001110010000000000000000000 -
+b100000010 ,
+0+
+0*
+b1000000101000000000000000000000 )
+b1000000101000000000000000000000 (
+b1000000101000000000000000000000 '
+b1000000101000000000000000000000 &
+0%
+0$
+0#
+0"
+b1000001110010000000000000000000 !
+$end
+#40
+1%
+#80
+0%
+#120
+1%
+#160
+0%
+#200
+1%
+#240
+0%
+#280
+1%
+#320
+0%
+#360
+1%
+#400
+0%
+#440
+1%
+#480
+0%
+#520
+1%
+#560
+0%
+#600
+1%
+#640
+0%
+#680
+1%
+#720
+0%
+#760
+1%
+#800
+0%
+#840
+1%
+#880
+0%
+#920
+1%
+#960
+0%
+#1000
+1%

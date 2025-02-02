@@ -1,0 +1,96 @@
+$date
+	Mon Mar 18 23:31:31 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module comparator_test $end
+$var wire 1 ! greater $end
+$var reg 1 " CLK $end
+$var reg 32 # a_operand [31:0] $end
+$var reg 32 $ b_operand [31:0] $end
+$scope module comparator_1 $end
+$var wire 32 % a_operand [31:0] $end
+$var wire 32 & b_operand [31:0] $end
+$var wire 32 ' result [31:0] $end
+$var wire 1 ( Exception $end
+$var reg 1 ! greater $end
+$var reg 1 ) sign $end
+$scope module Addition_Subtraction_1 $end
+$var wire 1 * AddBar_Sub $end
+$var wire 1 ( Exception $end
+$var wire 32 + a_operand [31:0] $end
+$var wire 32 , b_operand [31:0] $end
+$var wire 1 - operation_sub_addBar $end
+$var wire 1 . output_sign $end
+$var wire 25 / subtraction_diff [24:0] $end
+$var wire 31 0 sub_diff [30:0] $end
+$var wire 24 1 significand_sub_complement [23:0] $end
+$var wire 25 2 significand_sub [24:0] $end
+$var wire 24 3 significand_b_add_sub [23:0] $end
+$var wire 24 4 significand_b [23:0] $end
+$var wire 25 5 significand_add [24:0] $end
+$var wire 24 6 significand_a [23:0] $end
+$var wire 32 7 result [31:0] $end
+$var wire 1 8 perform $end
+$var wire 32 9 operand_b [31:0] $end
+$var wire 32 : operand_a [31:0] $end
+$var wire 8 ; exponent_sub [7:0] $end
+$var wire 8 < exponent_diff [7:0] $end
+$var wire 8 = exponent_b_add_sub [7:0] $end
+$var wire 31 > add_sum [30:0] $end
+$var wire 1 ? Comp_enable $end
+$scope module pe $end
+$var wire 8 @ Exponent_a [7:0] $end
+$var wire 25 A significand [24:0] $end
+$var wire 8 B Exponent_sub [7:0] $end
+$var reg 25 C Significand [24:0] $end
+$var reg 5 D shift [4:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11000 D
+b0 C
+b1101010 B
+b1000000000000000000000000 A
+b10000010 @
+0?
+b1000001000000000000000000000000 >
+b10000010 =
+b0 <
+b1101010 ;
+b1000001001000000000000000000000 :
+b1000001001000000000000000000000 9
+18
+b110101000000000000000000000000 7
+b101000000000000000000000 6
+b0 5
+b101000000000000000000000 4
+b101000000000000000000000 3
+b1000000000000000000000000 2
+b11000000000000000000000 1
+b110101000000000000000000000000 0
+b0 /
+0.
+0-
+b1000001001000000000000000000000 ,
+b1000001001000000000000000000000 +
+1*
+0)
+0(
+b110101000000000000000000000000 '
+b1000001001000000000000000000000 &
+b1000001001000000000000000000000 %
+b1000001001000000000000000000000 $
+b1000001001000000000000000000000 #
+x"
+1!
+$end
+#1000

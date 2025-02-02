@@ -1,0 +1,141 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 352 288)
+	(text "potential_adder_0" (rect 5 0 74 12)(font "Arial" ))
+	(text "inst" (rect 8 256 20 268)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK_Adder0" (rect 0 0 56 12)(font "Arial" ))
+		(text "CLK_Adder0" (rect 21 27 77 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "input_weightAdder0[31..0]" (rect 0 0 101 12)(font "Arial" ))
+		(text "input_weightAdder0[31..0]" (rect 21 43 122 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "decayed_potentialAdder0[31..0]" (rect 0 0 125 12)(font "Arial" ))
+		(text "decayed_potentialAdder0[31..0]" (rect 21 59 146 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 336 32)
+		(output)
+		(text "final_potentialAdder0[31..0]" (rect 0 0 106 12)(font "Arial" ))
+		(text "final_potentialAdder0[31..0]" (rect 209 27 315 39)(font "Arial" ))
+		(line (pt 336 32)(pt 320 32)(line_width 3))
+	)
+	(port
+		(pt 336 48)
+		(output)
+		(text "spikeAdder0" (rect 0 0 50 12)(font "Arial" ))
+		(text "spikeAdder0" (rect 265 43 315 55)(font "Arial" ))
+		(line (pt 336 48)(pt 320 48)(line_width 1))
+	)
+	(port
+		(pt 336 64)
+		(output)
+		(text "adder0output0" (rect 0 0 55 12)(font "Arial" ))
+		(text "adder0output0" (rect 260 59 315 71)(font "Arial" ))
+		(line (pt 336 64)(pt 320 64)(line_width 1))
+	)
+	(port
+		(pt 336 80)
+		(output)
+		(text "adder0output1" (rect 0 0 54 12)(font "Arial" ))
+		(text "adder0output1" (rect 261 75 315 87)(font "Arial" ))
+		(line (pt 336 80)(pt 320 80)(line_width 1))
+	)
+	(port
+		(pt 336 96)
+		(output)
+		(text "adder0output2" (rect 0 0 55 12)(font "Arial" ))
+		(text "adder0output2" (rect 260 91 315 103)(font "Arial" ))
+		(line (pt 336 96)(pt 320 96)(line_width 1))
+	)
+	(port
+		(pt 336 112)
+		(output)
+		(text "adder0output3" (rect 0 0 55 12)(font "Arial" ))
+		(text "adder0output3" (rect 260 107 315 119)(font "Arial" ))
+		(line (pt 336 112)(pt 320 112)(line_width 1))
+	)
+	(port
+		(pt 336 128)
+		(output)
+		(text "adder0output4" (rect 0 0 56 12)(font "Arial" ))
+		(text "adder0output4" (rect 259 123 315 135)(font "Arial" ))
+		(line (pt 336 128)(pt 320 128)(line_width 1))
+	)
+	(port
+		(pt 336 144)
+		(output)
+		(text "adder0output5" (rect 0 0 55 12)(font "Arial" ))
+		(text "adder0output5" (rect 260 139 315 151)(font "Arial" ))
+		(line (pt 336 144)(pt 320 144)(line_width 1))
+	)
+	(port
+		(pt 336 160)
+		(output)
+		(text "adder0output6" (rect 0 0 55 12)(font "Arial" ))
+		(text "adder0output6" (rect 260 155 315 167)(font "Arial" ))
+		(line (pt 336 160)(pt 320 160)(line_width 1))
+	)
+	(port
+		(pt 336 176)
+		(output)
+		(text "adder0output7" (rect 0 0 55 12)(font "Arial" ))
+		(text "adder0output7" (rect 260 171 315 183)(font "Arial" ))
+		(line (pt 336 176)(pt 320 176)(line_width 1))
+	)
+	(port
+		(pt 336 192)
+		(output)
+		(text "adder0output8" (rect 0 0 55 12)(font "Arial" ))
+		(text "adder0output8" (rect 260 187 315 199)(font "Arial" ))
+		(line (pt 336 192)(pt 320 192)(line_width 1))
+	)
+	(port
+		(pt 336 208)
+		(output)
+		(text "adder0output9" (rect 0 0 55 12)(font "Arial" ))
+		(text "adder0output9" (rect 260 203 315 215)(font "Arial" ))
+		(line (pt 336 208)(pt 320 208)(line_width 1))
+	)
+	(port
+		(pt 336 224)
+		(output)
+		(text "adder0done" (rect 0 0 46 12)(font "Arial" ))
+		(text "adder0done" (rect 269 219 315 231)(font "Arial" ))
+		(line (pt 336 224)(pt 320 224)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 320 256)(line_width 1))
+	)
+)

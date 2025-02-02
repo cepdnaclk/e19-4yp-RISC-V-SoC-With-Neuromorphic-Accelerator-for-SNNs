@@ -1,0 +1,191 @@
+$date
+	Thu Apr 11 13:44:11 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module test_potential_decay $end
+$var wire 32 ! output_potential [31:0] $end
+$var reg 1 " CLK $end
+$var reg 4 # CLK_count [3:0] $end
+$var reg 1 $ clear $end
+$var reg 3 % decay_rate [2:0] $end
+$var reg 32 & input_potential [31:0] $end
+$scope module potential_decay_1 $end
+$var wire 1 " CLK $end
+$var wire 1 $ clear $end
+$var wire 3 ' decay_rate [2:0] $end
+$var wire 32 ( membrane_potential [31:0] $end
+$var wire 32 ) result_divide_by_2_plus_4 [31:0] $end
+$var wire 1 * Exception $end
+$var reg 8 + adjusted_exponent [7:0] $end
+$var reg 8 , exponent [7:0] $end
+$var reg 8 - exponent_divided_by_2 [7:0] $end
+$var reg 8 . exponent_divided_by_4 [7:0] $end
+$var reg 23 / mantissa [22:0] $end
+$var reg 32 0 number_divided_by_2 [31:0] $end
+$var reg 32 1 number_divided_by_4 [31:0] $end
+$var reg 32 2 output_potential_decay [31:0] $end
+$var reg 2 3 sign [1:0] $end
+$scope module Addition_Subtraction_1 $end
+$var wire 1 4 AddBar_Sub $end
+$var wire 1 * Exception $end
+$var wire 32 5 a_operand [31:0] $end
+$var wire 32 6 b_operand [31:0] $end
+$var wire 1 7 operation_sub_addBar $end
+$var wire 1 8 output_sign $end
+$var wire 25 9 subtraction_diff [24:0] $end
+$var wire 31 : sub_diff [30:0] $end
+$var wire 24 ; significand_sub_complement [23:0] $end
+$var wire 25 < significand_sub [24:0] $end
+$var wire 24 = significand_b_add_sub [23:0] $end
+$var wire 24 > significand_b [23:0] $end
+$var wire 25 ? significand_add [24:0] $end
+$var wire 24 @ significand_a [23:0] $end
+$var wire 32 A result [31:0] $end
+$var wire 1 B perform $end
+$var wire 32 C operand_b [31:0] $end
+$var wire 32 D operand_a [31:0] $end
+$var wire 8 E exponent_sub [7:0] $end
+$var wire 8 F exponent_diff [7:0] $end
+$var wire 8 G exponent_b_add_sub [7:0] $end
+$var wire 31 H add_sum [30:0] $end
+$var wire 1 I Comp_enable $end
+$scope module pe $end
+$var wire 8 J Exponent_a [7:0] $end
+$var wire 25 K significand [24:0] $end
+$var wire 8 L Exponent_sub [7:0] $end
+$var reg 25 M Significand [24:0] $end
+$var reg 5 N shift [4:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx N
+bx M
+bx L
+bx K
+bx J
+xI
+bx H
+bx G
+bx F
+bx E
+bx D
+bx C
+xB
+bx A
+bx @
+bx ?
+bx >
+bx =
+bx <
+bx ;
+bx :
+bx 9
+x8
+x7
+bx 6
+bx 5
+04
+bx 3
+bx 2
+bx 1
+bx 0
+bx /
+bx .
+bx -
+bx ,
+bx +
+x*
+bx )
+b1000001001000000000000000000000 (
+b1 '
+b1000001001000000000000000000000 &
+b1 %
+0$
+b0 #
+0"
+bx !
+$end
+#40
+b1 #
+1"
+#80
+0"
+#120
+b10 #
+1"
+#160
+0"
+#200
+b11 #
+1"
+#240
+0"
+#280
+b1000000101000000000000000000000 !
+b1000000101000000000000000000000 2
+b10000001 +
+b1000000000000000000000 /
+b10000010 ,
+b0 3
+1$
+b0 #
+1"
+#320
+0"
+#360
+0$
+b1 #
+1"
+#400
+0"
+#440
+b10 #
+1"
+#480
+0"
+#520
+b11 #
+1"
+#560
+0"
+#600
+1$
+b0 #
+1"
+#640
+0"
+#680
+0$
+b1 #
+1"
+#720
+0"
+#760
+b10 #
+1"
+#800
+0"
+#840
+b11 #
+1"
+#880
+0"
+#920
+1$
+b0 #
+1"
+#960
+0"
+#1000
+0$
+b1 #
+1"

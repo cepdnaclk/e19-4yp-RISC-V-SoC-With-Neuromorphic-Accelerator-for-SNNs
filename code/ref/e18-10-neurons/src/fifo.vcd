@@ -1,0 +1,261 @@
+$date
+	Wed Jul  3 14:08:12 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module async_fifo_tb $end
+$var wire 8 ! rd_data [7:0] $end
+$var wire 1 " full $end
+$var wire 1 # empty $end
+$var parameter 32 $ DATA_WIDTH $end
+$var parameter 32 % FIFO_DEPTH $end
+$var reg 1 & rd_clk $end
+$var reg 1 ' rd_en $end
+$var reg 1 ( rst $end
+$var reg 1 ) wr_clk $end
+$var reg 8 * wr_data [7:0] $end
+$var reg 1 + wr_en $end
+$scope module uut $end
+$var wire 1 & rd_clk $end
+$var wire 1 ' rd_en $end
+$var wire 1 ( rst $end
+$var wire 1 ) wr_clk $end
+$var wire 8 , wr_data [7:0] $end
+$var wire 1 + wr_en $end
+$var wire 1 " full $end
+$var wire 1 # empty $end
+$var parameter 32 - DATA_WIDTH $end
+$var parameter 32 . FIFO_DEPTH $end
+$var reg 8 / rd_data [7:0] $end
+$var reg 5 0 rd_ptr [4:0] $end
+$var reg 5 1 rd_ptr_wr_clk1 [4:0] $end
+$var reg 5 2 rd_ptr_wr_clk2 [4:0] $end
+$var reg 5 3 wr_ptr [4:0] $end
+$var reg 5 4 wr_ptr_rd_clk1 [4:0] $end
+$var reg 5 5 wr_ptr_rd_clk2 [4:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10000 .
+b1000 -
+b10000 %
+b1000 $
+$end
+#0
+$dumpvars
+b0 5
+b0 4
+b0 3
+b0 2
+b0 1
+b0 0
+b0 /
+b0 ,
+0+
+b0 *
+0)
+1(
+0'
+0&
+1#
+0"
+b0 !
+$end
+#5
+1)
+#7
+1&
+#10
+0)
+#14
+0&
+#15
+1)
+#20
+0)
+b10100101 *
+b10100101 ,
+1+
+0(
+#21
+1&
+#25
+b1 3
+1)
+#28
+0&
+#30
+0)
+b1011010 *
+b1011010 ,
+#35
+b10 3
+b1 4
+1)
+1&
+#40
+0)
+b111100 *
+b111100 ,
+#42
+0&
+#45
+b11 3
+1)
+#49
+0#
+b1 5
+b11 4
+1&
+#50
+0)
+b11000011 *
+b11000011 ,
+#55
+b100 3
+1)
+#56
+0&
+#60
+0)
+b1111110 *
+b1111110 ,
+#63
+b11 5
+b100 4
+1&
+#65
+b101 3
+1)
+#70
+0)
+0&
+1'
+0+
+#75
+1)
+#77
+b1 0
+bx !
+bx /
+b100 5
+b101 4
+1&
+#80
+0)
+0'
+#84
+0&
+#85
+b1 1
+1)
+#90
+0)
+1'
+#91
+b101 5
+b10 0
+1&
+#95
+b1 2
+b10 1
+1)
+#98
+0&
+#100
+0)
+0'
+#105
+b10 2
+1)
+1&
+#110
+0)
+1'
+#112
+0&
+#115
+1)
+#119
+b11 0
+1&
+#120
+0)
+b11111111 *
+b11111111 ,
+1+
+0'
+#125
+b11 1
+b110 3
+1)
+#126
+0&
+#130
+0)
+b0 *
+b0 ,
+#133
+b110 4
+1&
+#135
+b111 3
+b11 2
+1)
+#140
+0)
+0&
+b10001 *
+b10001 ,
+#145
+b1000 3
+1)
+#147
+b110 5
+b1000 4
+1&
+#150
+0)
+1'
+0+
+#154
+0&
+#155
+1)
+#160
+0)
+#161
+b100 0
+b1000 5
+1&
+#165
+b100 1
+1)
+#168
+0&
+#170
+0)
+#175
+b100 2
+b101 0
+1)
+1&
+#180
+0)
+#182
+0&
+#185
+b101 1
+1)
+#189
+b110 0
+1&
+#190
+0)
+0'
