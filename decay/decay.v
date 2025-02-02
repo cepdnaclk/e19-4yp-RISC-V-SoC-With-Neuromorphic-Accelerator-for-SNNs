@@ -25,10 +25,12 @@ module potential_decay(
     wire v_squared_done;
     wire izi1_done;
     wire izi2_done;
+    reg start;
 
     multiplier_32bit v_squared_mul(
         .clk(clk),
-        .start(time_step),
+        .rst(time_step),
+        .start(start),
         .A(membrane_potential),
         .B(membrane_potential),
         .result(v_squared),
@@ -37,6 +39,7 @@ module potential_decay(
 
     shifter_32bit izi1(
         .clk(clk),
+        .rst(time_step),
         .start(v_squared_done),
         .data_in(v_squared[31:0]),
         .shift_amount(5'b00011),
@@ -47,7 +50,8 @@ module potential_decay(
 
     multiplier_32bit izi2(
         .clk(clk),
-        .start(time_step),
+        .rst(time_step),
+        .start(start),
         .A(membrane_potential),
         .B(32'h0005),
         .result(izi_second_term),
@@ -56,7 +60,8 @@ module potential_decay(
 
     shifter_32bit lif2(
         .clk(clk),
-        .start(time_step),
+        .rst(time_step),
+        .start(start),
         .data_in(membrane_potential),
         .shift_amount(5'b00001),
         .mode(2'b01),
@@ -66,7 +71,8 @@ module potential_decay(
 
     shifter_32bit lif4(
         .clk(clk),
-        .start(time_step),
+        .rst(time_step),
+        .start(start),
         .data_in(membrane_potential),
         .shift_amount(5'b00010),
         .mode(2'b01),
@@ -76,7 +82,8 @@ module potential_decay(
 
     shifter_32bit lif8(
         .clk(clk),
-        .start(time_step),
+        .rst(time_step),
+        .start(start),
         .data_in(membrane_potential),
         .shift_amount(5'b00011),
         .mode(2'b01),
@@ -86,6 +93,8 @@ module potential_decay(
 
     always @(posedge load) begin
         membrane_potential <= new_potential;
+        #10 start <= 1;
+        #10 start <= 0;
     end
 
     always @(posedge time_step) begin
@@ -95,8 +104,9 @@ module potential_decay(
     always @(posedge clk) begin
         if (rst) begin
             membrane_potential <= 0;
+            output_potential_decay <= 0;
         end else if (mode == `LIF0) begin
-            membrane_potential <= membrane_potential;
+            // Do nothing
         end else if (mode == `LIF2) begin
             if (done_lif2) begin
                 membrane_potential <= output_lif2;
@@ -122,7 +132,7 @@ module potential_decay(
                 membrane_potential <= v_squared;
             end
         end else if(mode == `IDLE) begin
-            membrane_potential <= membrane_potential;
+            // do nothing
         end
     end
 

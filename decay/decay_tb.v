@@ -30,14 +30,12 @@ module potential_decay_tb;
         forever begin
             time_step = 1;
             #10 time_step = 0;
-            #40;
+            #80;
         end
     end
 
     always @(posedge time_step) begin
-        #5;
-        if(output_potential_decay != 0)
-            new_potential <= output_potential_decay;
+        #10 new_potential <= output_potential_decay;
         #10 load = 1;
         #10 load = 0;
     end
@@ -62,7 +60,7 @@ module potential_decay_tb;
         load = 1;
         #10 load = 0;
         
-        #20 mode = 3'b001; 
+        #20 mode = 3'b010; 
 
         // End simulation
         #5000 $finish;
