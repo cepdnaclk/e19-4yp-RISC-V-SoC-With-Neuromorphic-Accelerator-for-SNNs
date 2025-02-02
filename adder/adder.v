@@ -1,5 +1,6 @@
 `timescale 1ns/100ps
 `include "../utils/32bit_mul.v"
+`include "../utils/encording.v"
 
 module potential_adder (
     input wire clk,
@@ -21,7 +22,8 @@ module potential_adder (
     reg [31:0] u;
 
     // Internal Signals for Izhikevich Model
-    reg [31:0] bv, bv_u, a_bv_u;
+    wire [63:0] bv, a_bv_u;
+    wire [31:0] bv_u;
     reg [31:0] a, b, c, d, v_threshold;
     
     reg bv_start, abv_start;
@@ -47,7 +49,7 @@ module potential_adder (
         .done(abv_done)
     );
 
-    assign bv_u = bv - u;
+    assign bv_u = bv[31:0] - u;
 
     always @(posedge bv_done) begin
         bv_start <= 0;
@@ -72,14 +74,12 @@ module potential_adder (
 
     always @(posedge time_step) begin
         done <= 0;
+        spike <= 0;
         if (init_mode == `DEFAULT) begin
             if (model == `LIF) begin
                 weight_added <= input_weight + decayed_potential;
             end else if (model == `IZHI) begin
-                weight_added <= weight_added - u;
-                bv <= 0;
-                bv_u <= 0;
-                a_bv_u <= 0;
+                weight_added <= input_weight + decayed_potential - u;
                 bv_start <= 1;
                 abv_start <= 0;
             end else if (model == `QLIF) begin
@@ -108,7 +108,7 @@ module potential_adder (
                 if(abv_done) begin
                     spike <= (weight_added > v_threshold);
                     final_potential <= (weight_added > v_threshold) ? c : weight_added;
-                    u <= (weight_added > v_threshold) ? u + d : a_bv_u;
+                    u <= (weight_added > v_threshold) ? u + d : a_bv_u[31:0];
                     done <= 1;
                 end
             end else if (model == `QLIF) begin
@@ -119,9 +119,4 @@ module potential_adder (
         end
     end
 
-    always @(posedge) begin
-        
-    end
-
-    
 endmodule
