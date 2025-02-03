@@ -1,7 +1,3 @@
-// `timescale 1ns/100ps
-// `include "../utils/32bit_mul.v"
-// `include "../utils/encording.v"
-
 module potential_adder (
     input wire clk,
     input wire rst,        
