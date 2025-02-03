@@ -1,3 +1,5 @@
+`timescale 1ns/100ps
+
 module multiplier_32bit(
     input wire clk,
     input wire rst,

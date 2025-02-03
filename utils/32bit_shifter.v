@@ -1,3 +1,5 @@
+`timescale 1ns/100ps
+
 module shifter_32bit (
     input wire clk,
     input wire rst,

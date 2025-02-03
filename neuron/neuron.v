@@ -1,3 +1,5 @@
+`timescale 1ns/100ps
+
 module Neuron (
     input wire clk, rst, time_step, load,
     input wire [9:0] address,
@@ -61,7 +63,8 @@ module Neuron (
     assign decay_load = (decay_mode == `IDLE) ? load : adder_done;
     assign new_potential = (decay_mode == `IDLE) ? value : final_potential;
 
-    assign adder_load = (adder_model != `DEFAULT) ? load : 0;
-    assign input_weight = (adder_model != `DEFAULT) ? value : accumulated_out;
+    assign adder_load = (init_mode_adder != `DEFAULT) ? load : 0;
+    assign input_weight = (init_mode_adder != `DEFAULT) ? value : accumulated_out;
+    assign decayed_potential = output_potential_decay;
 
 endmodule

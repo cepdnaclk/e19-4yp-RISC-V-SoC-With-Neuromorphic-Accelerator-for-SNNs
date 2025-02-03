@@ -1,3 +1,5 @@
+`timescale 1ns/100ps
+
 module potential_adder (
     input wire clk,
     input wire rst,        
@@ -16,6 +18,7 @@ module potential_adder (
     // Common Signals
     reg [31:0] weight_added;
     reg [31:0] u;
+    reg adder_start, adder_send;
 
     // Internal Signals for Izhikevich Model
     wire [63:0] bv, a_bv_u;
@@ -72,18 +75,8 @@ module potential_adder (
         done <= 0;
         spike <= 0;
         clear_mul <= 1;
-        if (init_mode == `DEFAULT) begin
-            if (model == `LIF) begin
-                weight_added <= input_weight + decayed_potential;
-            end else if (model == `IZHI_AD) begin
-                weight_added <= input_weight + decayed_potential - u;
-                bv_start <= 1;
-                abv_start <= 0;
-            end else if (model == `QLIF) begin
-                weight_added <= input_weight + decayed_potential;
-            end
-        end
-        #10 clear_mul <= 0;
+        #10 adder_start <= 1;
+        clear_mul <= 0;
     end
 
     always @(posedge clk) begin
@@ -97,24 +90,41 @@ module potential_adder (
             d <= 0;
             v_threshold <= 0;
             u <= 0;
+            weight_added <= 0;
         end else if (init_mode == `DEFAULT) begin
-            if(model == `LIF) begin
-                spike <= (weight_added > v_threshold);
-                final_potential <= (weight_added > v_threshold) ? (weight_added - v_threshold) : weight_added;
-                done <= 1;
-            end else if (model == `IZHI) begin
-                if(abv_done) begin
-                    clear_mul <= 1;
-                    spike <= (weight_added > v_threshold);
-                    final_potential <= (weight_added > v_threshold) ? c : weight_added;
-                    u <= (weight_added > v_threshold) ? u + d : a_bv_u[31:0];
-                    done <= 1;
-                    #10 clear_mul <= 0;
+            if (adder_start) begin
+                if (model == `LIF) begin
+                    weight_added <= input_weight + decayed_potential;
+                end else if (model == `IZHI_AD) begin
+                    weight_added <= input_weight + decayed_potential - u;
+                    bv_start <= 1;
+                    abv_start <= 0;
+                end else if (model == `QLIF) begin
+                    weight_added <= input_weight + decayed_potential;
                 end
-            end else if (model == `QLIF) begin
-                spike <= (weight_added > v_threshold);
-                final_potential <= (weight_added > v_threshold) ? (weight_added - v_threshold) : weight_added;
-                done <= 1;
+                adder_start <= 0;
+                adder_send <= 1;
+            end
+            if(adder_send) begin
+                if(model == `LIF) begin
+                    spike <= (weight_added > v_threshold);
+                    final_potential <= (weight_added > v_threshold) ? (weight_added - v_threshold) : weight_added;
+                    done <= 1;
+                end else if (model == `IZHI) begin
+                    if(abv_done) begin
+                        clear_mul <= 1;
+                        spike <= (weight_added > v_threshold);
+                        final_potential <= (weight_added > v_threshold) ? c : weight_added;
+                        u <= (weight_added > v_threshold) ? u + d : a_bv_u[31:0];
+                        done <= 1;
+                        #10 clear_mul <= 0;
+                    end
+                end else if (model == `QLIF) begin
+                    spike <= (weight_added > v_threshold);
+                    final_potential <= (weight_added > v_threshold) ? (weight_added - v_threshold) : weight_added;
+                    done <= 1;
+                end
+                adder_send <= 0;
             end
         end
     end

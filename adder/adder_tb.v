@@ -1,5 +1,8 @@
-`timescale 1ns/100ps
+`include "../utils/encording.v"
+`include "../utils/32bit_mul.v"
+`include "../utils/32bit_shifter.v"
 `include "adder.v"
+`timescale 1ns/100ps
 
 module potential_adder_tb();
     reg clk;

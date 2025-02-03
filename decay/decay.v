@@ -1,3 +1,5 @@
+`timescale 1ns/100ps
+
 module potential_decay(
     input wire clk,
     input wire rst,
@@ -22,6 +24,7 @@ module potential_decay(
     wire [31:0] izi_first_term;
     wire [63:0] izi_second_term;
     reg start;
+    reg decay_send;
 
     multiplier_32bit v_squared_mul(
         .clk(clk),
@@ -96,13 +99,15 @@ module potential_decay(
     end
 
     always @(posedge time_step) begin
-        output_potential_decay <= membrane_potential;
+        decay_send <= 1;
     end
 
     always @(posedge clk) begin
         if (rst) begin
             membrane_potential <= 0;
             output_potential_decay <= 0;
+            decay_send <= 0;
+            start <= 0;
         end else if (mode == `LIF0) begin
             // Do nothing
         end else if (mode == `LIF2) begin
@@ -131,6 +136,11 @@ module potential_decay(
             end
         end else if(mode == `IDLE) begin
             // do nothing
+        end
+
+        if(decay_send) begin
+            output_potential_decay <= membrane_potential;
+            decay_send <= 0;
         end
     end
 
