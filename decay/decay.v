@@ -1,7 +1,3 @@
-`include "../utils/32bit_mul.v"
-`include "../utils/32bit_shifter.v"
-`include "../utils/encording.v"
-
 module potential_decay(
     input wire clk,
     input wire rst,
@@ -93,8 +89,10 @@ module potential_decay(
 
     always @(posedge load) begin
         membrane_potential <= new_potential;
-        #10 start <= 1;
-        #10 start <= 0;
+        if(mode != `IDLE) begin
+            #10 start <= 1;
+            #10 start <= 0;
+        end
     end
 
     always @(posedge time_step) begin
