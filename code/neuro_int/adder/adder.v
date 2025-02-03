@@ -111,8 +111,9 @@ module potential_adder (
                     final_potential <= (weight_added > v_threshold) ? (weight_added - v_threshold) : weight_added;
                     done <= 1;
                     adder_send <= 0;
-                end else if (model == `IZHI) begin
-                    if(abv_done) begin
+                    weight_added <= 0;
+                end else if (model == `IZHI_AD) begin
+                    if (abv_done) begin
                         clear_mul <= 1;
                         spike <= (weight_added > v_threshold);
                         final_potential <= (weight_added > v_threshold) ? c : weight_added;
@@ -120,12 +121,14 @@ module potential_adder (
                         done <= 1;
                         #10 clear_mul <= 0;
                         adder_send <= 0;
+                        weight_added <= 0;
                     end
                 end else if (model == `QLIF) begin
                     spike <= (weight_added > v_threshold);
                     final_potential <= (weight_added > v_threshold) ? (weight_added - v_threshold) : weight_added;
                     done <= 1;
                     adder_send <= 0;
+                    weight_added <= 0;
                 end
             end
         end
