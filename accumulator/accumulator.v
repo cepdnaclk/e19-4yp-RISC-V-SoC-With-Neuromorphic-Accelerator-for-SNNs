@@ -3,6 +3,7 @@ module Accumulator (
     input  rst,        // Reset signal
     input  time_step,  // Time step pulse (sync signal)
     input  load,       // Load signal for setting weights
+    input  mode,       // Mode
     input  [9:0]  src_addr,  // 10-bit Source address
     input  [31:0] weight_in, // Input weight for loading
     output reg [31:0] accumulated_out // Output accumulated weight (32-bit)
@@ -18,9 +19,11 @@ module Accumulator (
 
     // Reset and Weight Initialization
     always @(posedge clk) begin
-        for (i = 0; i < 16; i = i + 1) begin
-            if (weight_addr[i] == src_addr) begin
-                accumulated_reg <= accumulated_reg + weight_value[i];
+        if(!mode) begin
+            for (i = 0; i < 16; i = i + 1) begin
+                if (weight_addr[i] == src_addr) begin
+                    accumulated_reg <= accumulated_reg + weight_value[i];
+                end
             end
         end
     end
