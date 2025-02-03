@@ -1,0 +1,357 @@
+$date
+	Mon Feb 03 12:01:09 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module Neuron_tb $end
+$var wire 1 ! spike $end
+$var reg 2 " adder_model [1:0] $end
+$var reg 10 # address [9:0] $end
+$var reg 1 $ clk $end
+$var reg 3 % decay_mode [2:0] $end
+$var reg 1 & init_mode_acc $end
+$var reg 3 ' init_mode_adder [2:0] $end
+$var reg 1 ( load $end
+$var reg 1 ) rst $end
+$var reg 1 * time_step $end
+$var reg 32 + value [31:0] $end
+$scope module neuron $end
+$var wire 2 , adder_model [1:0] $end
+$var wire 10 - address [9:0] $end
+$var wire 1 $ clk $end
+$var wire 3 . decay_mode [2:0] $end
+$var wire 32 / decayed_potential [31:0] $end
+$var wire 1 & init_mode_acc $end
+$var wire 3 0 init_mode_adder [2:0] $end
+$var wire 1 ( load $end
+$var wire 1 ) rst $end
+$var wire 10 1 src_addr [9:0] $end
+$var wire 1 * time_step $end
+$var wire 32 2 value [31:0] $end
+$var wire 1 3 weight_load $end
+$var wire 32 4 weight_in [31:0] $end
+$var wire 1 ! spike $end
+$var wire 32 5 output_potential_decay [31:0] $end
+$var wire 32 6 new_potential [31:0] $end
+$var wire 32 7 input_weight [31:0] $end
+$var wire 32 8 final_potential [31:0] $end
+$var wire 1 9 decay_load $end
+$var wire 1 : adder_load $end
+$var wire 1 ; adder_done $end
+$var wire 32 < accumulated_out [31:0] $end
+$scope module acc $end
+$var wire 1 $ clk $end
+$var wire 1 3 load $end
+$var wire 1 & mode $end
+$var wire 1 ) rst $end
+$var wire 10 = src_addr [9:0] $end
+$var wire 1 * time_step $end
+$var wire 32 > weight_in [31:0] $end
+$var reg 32 ? accumulated_out [31:0] $end
+$var reg 32 @ accumulated_reg [31:0] $end
+$var reg 5 A write_ptr [4:0] $end
+$var integer 32 B i [31:0] $end
+$upscope $end
+$scope module adder $end
+$var wire 1 $ clk $end
+$var wire 32 C decayed_potential [31:0] $end
+$var wire 3 D init_mode [2:0] $end
+$var wire 32 E input_weight [31:0] $end
+$var wire 1 : load $end
+$var wire 2 F model [1:0] $end
+$var wire 1 ) rst $end
+$var wire 1 * time_step $end
+$var wire 32 G bv_u [31:0] $end
+$var wire 1 H bv_done $end
+$var wire 64 I bv [63:0] $end
+$var wire 1 J abv_done $end
+$var wire 64 K a_bv_u [63:0] $end
+$var reg 32 L a [31:0] $end
+$var reg 1 M abv_start $end
+$var reg 32 N b [31:0] $end
+$var reg 1 O bv_start $end
+$var reg 32 P c [31:0] $end
+$var reg 1 Q clear_mul $end
+$var reg 32 R d [31:0] $end
+$var reg 1 ; done $end
+$var reg 32 S final_potential [31:0] $end
+$var reg 1 ! spike $end
+$var reg 32 T u [31:0] $end
+$var reg 32 U v_threshold [31:0] $end
+$var reg 32 V weight_added [31:0] $end
+$scope module multIzhiBV $end
+$var wire 32 W A [31:0] $end
+$var wire 32 X B [31:0] $end
+$var wire 1 $ clk $end
+$var wire 1 Q rst $end
+$var wire 1 O start $end
+$var reg 6 Y count [5:0] $end
+$var reg 1 H done $end
+$var reg 32 Z multiplicand [31:0] $end
+$var reg 32 [ multiplier [31:0] $end
+$var reg 64 \ product [63:0] $end
+$var reg 64 ] result [63:0] $end
+$var reg 1 ^ running $end
+$upscope $end
+$scope module multIzhiaBVu $end
+$var wire 32 _ A [31:0] $end
+$var wire 32 ` B [31:0] $end
+$var wire 1 $ clk $end
+$var wire 1 Q rst $end
+$var wire 1 M start $end
+$var reg 6 a count [5:0] $end
+$var reg 1 J done $end
+$var reg 32 b multiplicand [31:0] $end
+$var reg 32 c multiplier [31:0] $end
+$var reg 64 d product [63:0] $end
+$var reg 64 e result [63:0] $end
+$var reg 1 f running $end
+$upscope $end
+$upscope $end
+$scope module decay $end
+$var wire 1 $ clk $end
+$var wire 1 9 load $end
+$var wire 3 g mode [2:0] $end
+$var wire 32 h new_potential [31:0] $end
+$var wire 1 ) rst $end
+$var wire 1 * time_step $end
+$var wire 1 i v_squared_done $end
+$var wire 64 j v_squared [63:0] $end
+$var wire 32 k output_lif8 [31:0] $end
+$var wire 32 l output_lif4 [31:0] $end
+$var wire 32 m output_lif2 [31:0] $end
+$var wire 64 n izi_second_term [63:0] $end
+$var wire 32 o izi_first_term [31:0] $end
+$var wire 1 p izi2_done $end
+$var wire 1 q izi1_done $end
+$var wire 1 r done_lif8 $end
+$var wire 1 s done_lif4 $end
+$var wire 1 t done_lif2 $end
+$var reg 32 u membrane_potential [31:0] $end
+$var reg 32 v output_potential_decay [31:0] $end
+$var reg 1 w start $end
+$scope module izi1 $end
+$var wire 1 $ clk $end
+$var wire 32 x data_in [31:0] $end
+$var wire 2 y mode [1:0] $end
+$var wire 1 * rst $end
+$var wire 5 z shift_amount [4:0] $end
+$var wire 1 i start $end
+$var reg 5 { count [4:0] $end
+$var reg 32 | data_out [31:0] $end
+$var reg 1 q done $end
+$var reg 1 } running $end
+$var reg 32 ~ shift_reg [31:0] $end
+$upscope $end
+$scope module izi2 $end
+$var wire 32 !" A [31:0] $end
+$var wire 32 "" B [31:0] $end
+$var wire 1 $ clk $end
+$var wire 1 * rst $end
+$var wire 1 w start $end
+$var reg 6 #" count [5:0] $end
+$var reg 1 p done $end
+$var reg 32 $" multiplicand [31:0] $end
+$var reg 32 %" multiplier [31:0] $end
+$var reg 64 &" product [63:0] $end
+$var reg 64 '" result [63:0] $end
+$var reg 1 (" running $end
+$upscope $end
+$scope module lif2 $end
+$var wire 1 $ clk $end
+$var wire 32 )" data_in [31:0] $end
+$var wire 2 *" mode [1:0] $end
+$var wire 1 * rst $end
+$var wire 5 +" shift_amount [4:0] $end
+$var wire 1 w start $end
+$var reg 5 ," count [4:0] $end
+$var reg 32 -" data_out [31:0] $end
+$var reg 1 t done $end
+$var reg 1 ." running $end
+$var reg 32 /" shift_reg [31:0] $end
+$upscope $end
+$scope module lif4 $end
+$var wire 1 $ clk $end
+$var wire 32 0" data_in [31:0] $end
+$var wire 2 1" mode [1:0] $end
+$var wire 1 * rst $end
+$var wire 5 2" shift_amount [4:0] $end
+$var wire 1 w start $end
+$var reg 5 3" count [4:0] $end
+$var reg 32 4" data_out [31:0] $end
+$var reg 1 s done $end
+$var reg 1 5" running $end
+$var reg 32 6" shift_reg [31:0] $end
+$upscope $end
+$scope module lif8 $end
+$var wire 1 $ clk $end
+$var wire 32 7" data_in [31:0] $end
+$var wire 2 8" mode [1:0] $end
+$var wire 1 * rst $end
+$var wire 5 9" shift_amount [4:0] $end
+$var wire 1 w start $end
+$var reg 5 :" count [4:0] $end
+$var reg 32 ;" data_out [31:0] $end
+$var reg 1 r done $end
+$var reg 1 <" running $end
+$var reg 32 =" shift_reg [31:0] $end
+$upscope $end
+$scope module v_squared_mul $end
+$var wire 32 >" A [31:0] $end
+$var wire 32 ?" B [31:0] $end
+$var wire 1 $ clk $end
+$var wire 1 * rst $end
+$var wire 1 w start $end
+$var reg 6 @" count [5:0] $end
+$var reg 1 i done $end
+$var reg 32 A" multiplicand [31:0] $end
+$var reg 32 B" multiplier [31:0] $end
+$var reg 64 C" product [63:0] $end
+$var reg 64 D" result [63:0] $end
+$var reg 1 E" running $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+xE"
+bx D"
+bx C"
+bx B"
+bx A"
+bx @"
+bx ?"
+bx >"
+bx ="
+x<"
+bx ;"
+bx :"
+b11 9"
+b1 8"
+bx 7"
+bx 6"
+x5"
+bx 4"
+bx 3"
+b10 2"
+b1 1"
+bx 0"
+bx /"
+x."
+bx -"
+bx ,"
+b1 +"
+b1 *"
+bx )"
+x("
+bx '"
+bx &"
+bx %"
+bx $"
+bx #"
+b101 ""
+bx !"
+bx ~
+x}
+bx |
+bx {
+b11 z
+b1 y
+bx x
+xw
+bx v
+bx u
+xt
+xs
+xr
+xq
+xp
+bx o
+bx n
+bx m
+bx l
+bx k
+bx j
+xi
+b0 h
+b111 g
+xf
+bx e
+bx d
+bx c
+bx b
+bx a
+bx `
+bx _
+x^
+bx ]
+bx \
+bx [
+bx Z
+bx Y
+bz X
+bx W
+bx V
+bx U
+bx T
+bx S
+bx R
+xQ
+bx P
+xO
+bx N
+xM
+bx L
+bx K
+xJ
+bx I
+xH
+bx G
+b0 F
+bx E
+b111 D
+bz C
+b10000 B
+b0 A
+b0 @
+bx ?
+b0 >
+b0 =
+bx <
+x;
+0:
+09
+bx 8
+bx 7
+b0 6
+bx 5
+b0 4
+03
+b0 2
+b0 1
+b111 0
+bz /
+b111 .
+b0 -
+b0 ,
+b0 +
+0*
+0)
+0(
+b111 '
+0&
+b111 %
+0$
+b0 #
+b0 "
+x!
+$end
