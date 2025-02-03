@@ -1,0 +1,278 @@
+$date
+	Sun Feb 02 10:35:06 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Accumulator_tb $end
+$var wire 32 ! accumulated_out [31:0] $end
+$var reg 1 " clk $end
+$var reg 1 # load $end
+$var reg 1 $ rst $end
+$var reg 10 % src_addr [9:0] $end
+$var reg 1 & time_step $end
+$var reg 32 ' weight_in [31:0] $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 1 # load $end
+$var wire 1 $ rst $end
+$var wire 10 ( src_addr [9:0] $end
+$var wire 1 & time_step $end
+$var wire 32 ) weight_in [31:0] $end
+$var reg 32 * accumulated_out [31:0] $end
+$var reg 32 + accumulated_reg [31:0] $end
+$var reg 5 , write_ptr [4:0] $end
+$var integer 32 - i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx -
+bx ,
+bx +
+bx *
+b0 )
+b0 (
+b0 '
+0&
+b0 %
+1$
+0#
+0"
+bx !
+$end
+#5
+b10000 -
+1"
+#10
+b0 ,
+b0 +
+b10000 -
+0"
+0$
+#15
+b10000 -
+1"
+#20
+b1 ,
+0"
+b1 '
+b1 )
+b1 %
+b1 (
+1#
+#25
+b1 +
+b10000 -
+1"
+#30
+0"
+0#
+#35
+b10 ,
+b10000 -
+1"
+b10 '
+b10 )
+b10 %
+b10 (
+1#
+#40
+0"
+#45
+b11 +
+b10000 -
+1"
+0#
+#50
+b11 ,
+0"
+b11 '
+b11 )
+b11 %
+b11 (
+1#
+#55
+b110 +
+b10000 -
+1"
+#60
+0"
+0#
+#65
+b100 ,
+b10000 -
+1"
+b100 '
+b100 )
+b100 %
+b100 (
+1#
+#70
+0"
+#75
+b10000 -
+1"
+b0 '
+b0 )
+b0 %
+b0 (
+0#
+#80
+0"
+#85
+b10000 -
+1"
+#90
+0"
+#95
+b10000 -
+1"
+#100
+b0 +
+b110 !
+b110 *
+0"
+b1 %
+b1 (
+1&
+#105
+b1 +
+b10000 -
+1"
+#110
+0"
+b10 %
+b10 (
+0&
+#115
+b11 +
+b10000 -
+1"
+#120
+0"
+b11 %
+b11 (
+#125
+b110 +
+b10000 -
+1"
+#130
+0"
+b10 %
+b10 (
+#135
+b1000 +
+b10000 -
+1"
+#140
+0"
+b0 %
+b0 (
+#145
+b10000 -
+1"
+#150
+b0 +
+b1000 !
+b1000 *
+0"
+b1 %
+b1 (
+1&
+#155
+b1 +
+b10000 -
+1"
+#160
+0"
+b10 %
+b10 (
+0&
+#165
+b11 +
+b10000 -
+1"
+#170
+0"
+b11 %
+b11 (
+#175
+b110 +
+b10000 -
+1"
+#180
+0"
+b0 %
+b0 (
+#185
+b10000 -
+1"
+#190
+0"
+#195
+b10000 -
+1"
+#200
+b0 +
+b110 !
+b110 *
+0"
+1&
+#205
+b10000 -
+1"
+#210
+0"
+0&
+#215
+b10000 -
+1"
+#220
+0"
+#225
+b10000 -
+1"
+#230
+0"
+#235
+b10000 -
+1"
+#240
+0"
+#245
+b10000 -
+1"
+#250
+b0 !
+b0 *
+0"
+1&
+#255
+b10000 -
+1"
+#260
+0"
+0&
+#265
+b10000 -
+1"
+#270
+0"
+#275
+b10000 -
+1"
+#280
+0"
+#285
+b10000 -
+1"
+#290
+0"
