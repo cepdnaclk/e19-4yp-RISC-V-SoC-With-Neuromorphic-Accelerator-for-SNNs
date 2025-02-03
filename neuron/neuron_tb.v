@@ -59,21 +59,21 @@ module Neuron_tb ();
         // load weight
         #10
         address = 1;
-        value = 32'h00000125;
+        value = 32'h0000d125;
         load = 1;
         #10 load = 0;
 
         // load weight
         #10
         address = 2;
-        value = 32'h00000001;
+        value = 32'h00000fff;
         load = 1;
         #10 load = 0;
 
         // load weight
         #10
         address = 3;
-        value = 32'h00000501;
+        value = 32'h0000f501;
         load = 1;
         #10 load = 0;
 
@@ -124,7 +124,7 @@ module Neuron_tb ();
         // init VT
         #10;
         init_mode_adder = `VT;
-        value = 32'h000fffff;
+        value = 32'h0002ffff;
         load = 1;
         #10 load = 0;
         // init U
@@ -142,6 +142,7 @@ module Neuron_tb ();
         // set modes for working
         #10 decay_mode = `LIF2;
         adder_model = `LIF;
+        init_mode_adder = `DEFAULT;
 
         // give inputs
         #10 address = 1;
@@ -150,7 +151,6 @@ module Neuron_tb ();
         #10 address = 0;
         
         // Time step
-        init_mode_adder = `DEFAULT;
         #15 time_step = 1;
         #10 time_step = 0;
         
@@ -162,7 +162,40 @@ module Neuron_tb ();
         #10 address = 0;
         
         // Time step
-        init_mode_adder = `DEFAULT;
+        #15 time_step = 1;
+        #10 time_step = 0;
+
+        #50;
+
+        // give inputs
+        #10 address = 1;
+        #10 address = 2;
+        #10 address = 0;
+        
+        // Time step
+        #15 time_step = 1;
+        #10 time_step = 0;
+
+        #50;
+
+        // give inputs
+        #10 address = 2;
+        #10 address = 3;
+        #10 address = 0;
+        
+        // Time step
+        #15 time_step = 1;
+        #10 time_step = 0;
+
+        #50;
+
+        // give inputs
+        #10 address = 1;
+        #10 address = 2;
+        #10 address = 3;
+        #10 address = 0;
+        
+        // Time step
         #15 time_step = 1;
         #10 time_step = 0;
 
