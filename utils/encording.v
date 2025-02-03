@@ -21,3 +21,4 @@
 `define D 3'b100
 `define VT 3'b101
 `define U 3'b110
+`define IDLE 3'b111
