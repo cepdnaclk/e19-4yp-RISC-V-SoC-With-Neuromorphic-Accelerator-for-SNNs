@@ -1,6 +1,6 @@
-`timescale 1ns/100ps
-`include "../utils/32bit_mul.v"
-`include "../utils/encording.v"
+// `timescale 1ns/100ps
+// `include "../utils/32bit_mul.v"
+// `include "../utils/encording.v"
 
 module potential_adder (
     input wire clk,
@@ -79,7 +79,7 @@ module potential_adder (
         if (init_mode == `DEFAULT) begin
             if (model == `LIF) begin
                 weight_added <= input_weight + decayed_potential;
-            end else if (model == `IZHI) begin
+            end else if (model == `IZHI_AD) begin
                 weight_added <= input_weight + decayed_potential - u;
                 bv_start <= 1;
                 abv_start <= 0;

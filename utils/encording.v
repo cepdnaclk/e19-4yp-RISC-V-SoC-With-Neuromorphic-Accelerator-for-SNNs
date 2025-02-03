@@ -10,7 +10,7 @@
 
 // Adder model
 `define LIF 2'b00
-`define IZHI 2'b01
+`define IZHI_AD 2'b01
 `define QLIF 2'b10
 
 // Adder init mode

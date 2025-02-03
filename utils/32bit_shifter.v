@@ -18,6 +18,7 @@ module shifter_32bit (
         count <= 0;
         running <= 0;
         done <= 0;
+        data_out <= 0;
     end
 
     always @(posedge start) begin
@@ -25,6 +26,7 @@ module shifter_32bit (
         count <= shift_amount;
         running <= 1;
         done <= 0;
+        data_out <= 0;
     end
 
     always @(posedge clk) begin
