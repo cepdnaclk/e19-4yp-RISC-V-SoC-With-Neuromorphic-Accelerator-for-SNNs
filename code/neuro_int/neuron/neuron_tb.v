@@ -140,7 +140,7 @@ module Neuron_tb ();
         value = 0;
 
         // set modes for working
-        #10 decay_mode = `LIF2;
+        #10 decay_mode = `LIF24;
         adder_model = `LIF;
         init_mode_adder = `DEFAULT;
 

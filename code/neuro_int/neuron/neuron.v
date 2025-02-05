@@ -63,8 +63,8 @@ module Neuron (
     assign decay_load = (decay_mode == `IDLE) ? load : adder_done;
     assign new_potential = (decay_mode == `IDLE) ? value : final_potential;
 
-    assign adder_load = (init_mode_adder != `DEFAULT) ? load : 0;
-    assign input_weight = (init_mode_adder != `DEFAULT) ? value : accumulated_out;
+    assign adder_load = (init_mode_adder == `DEFAULT) ? 0 : (init_mode_adder == `IDLE) ? 0 : load;
+    assign input_weight = (init_mode_adder == `DEFAULT) ? accumulated_out : (init_mode_adder == `IDLE) ? 0 : value;
     assign decayed_potential = output_potential_decay;
 
 endmodule
