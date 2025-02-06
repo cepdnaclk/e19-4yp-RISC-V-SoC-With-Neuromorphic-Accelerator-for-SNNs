@@ -79,6 +79,131 @@ module controller_tb();
         #30 data = 8'b00000000;
         load_data <= 1; #10 load_data <= 0;
 
+        #50;
+
+        #30 data = 8'b11111110;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00001000;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000000;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b10101111;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000010;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000011;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00100100;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000000;
+        load_data <= 1; #10 load_data <= 0;
+
+                #50;
+
+        #30 data = 8'b11111110;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00010000;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000000;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b10101111;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000010;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000011;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00100100;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000000;
+        load_data <= 1; #10 load_data <= 0;
+
+                #50;
+
+        #30 data = 8'b11111110;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00011000;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000000;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b10101111;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000010;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000011;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00100100;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000000;
+        load_data <= 1; #10 load_data <= 0;
+
+                #50;
+
+        #30 data = 8'b11111110;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00100000;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000000;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b10101111;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000010;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000011;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00100100;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000000;
+        load_data <= 1; #10 load_data <= 0;
+
+                #50;
+
+        #30 data = 8'b11111110;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00101000;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000000;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b10101111;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000010;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000011;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00100100;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000000;
+        load_data <= 1; #10 load_data <= 0;
+
+                #50;
+
+        #30 data = 8'b11111110;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00110000;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000000;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b10101111;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000010;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000011;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00100100;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000000;
+        load_data <= 1; #10 load_data <= 0;
+
+                #50;
+
+        #30 data = 8'b11111101;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000001;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000000;
+        load_data <= 1; #10 load_data <= 0;
+        #30 data = 8'b00000000;
+        load_data <= 1; #10 load_data <= 0;
+
         #100
         $finish;
     end

@@ -15,7 +15,7 @@ module Controller_N(
 
     reg [7:0] controller_mode;
     reg [1:0] controller_status;
-    reg [7:0] buffer [3:0];
+    reg [7:0] buffer [2:0];
     reg [1:0] buffer_status;
     reg [1:0] buffer_mode;
     reg data_ready;
@@ -38,7 +38,6 @@ module Controller_N(
             buffer[0] <= 0;
             buffer[1] <= 0;
             buffer[2] <= 0;
-            buffer[3] <= 0;
             buffer_status <= 0;
             buffer_mode <= `BUFFER_IDLE;
             data_ready <= 0;
@@ -46,6 +45,7 @@ module Controller_N(
             if (controller_status == `MODE_SELECT) begin
                 if(data == `END_PACKET) begin
                     load <= 1;
+                    #10 load <= 0;
                 end else begin
                     load <= 0;
                     controller_mode <= data;
