@@ -10,7 +10,8 @@ module Controller_N(
     output reg [2:0] decay_mode,
     output reg [2:0] init_mode_adder,
     output reg [1:0] adder_model,
-    output reg init_mode_acc
+    output reg init_mode_acc,
+    output reg neuron_mode
 );
 
     reg [7:0] controller_mode;
@@ -41,13 +42,19 @@ module Controller_N(
             buffer_status <= 0;
             buffer_mode <= `BUFFER_IDLE;
             data_ready <= 0;
+            neuron_mode <= 1;
         end else if (data_ready) begin
             if (controller_status == `MODE_SELECT) begin
                 if(data == `END_PACKET) begin
                     load <= 1;
                     #10 load <= 0;
+                    neuron_mode <= 0;
+                    controller_status <= `MODE_SELECT;
+                    address <= 0;
+                    value <= 0;
                 end else begin
                     load <= 0;
+                    neuron_mode <= 1;
                     controller_mode <= data;
                     controller_status <= `MODE_LOAD;
                 end

@@ -1,15 +1,20 @@
 `timescale 1ns/100ps
 
 module Neuron (
-    input wire clk, rst, time_step, load,
-    input wire [9:0] address,
-    input wire [31:0] value,
-    input wire [2:0] decay_mode,
-    input wire [1:0] adder_model,
-    input wire [2:0] init_mode_adder,
-    input wire init_mode_acc,
+    input wire clk, rst, time_step,
+    input wire [7:0] data,
+    input wire load_data,
+    input wire [9:0] src_addr_in,
     output wire spike
 );
+    wire load;
+    wire [9:0] address;
+    wire [31:0] value;
+    wire [2:0] decay_mode;
+    wire [1:0] adder_model;
+    wire [2:0] init_mode_adder;
+    wire init_mode_acc;
+    wire neuron_mode;
 
     wire [31:0] new_potential, final_potential;
     wire [31:0] output_potential_decay;
@@ -20,6 +25,20 @@ module Neuron (
     wire [9:0] src_addr;
     wire [31:0] weight_in;
 
+    Controller_N controller (
+        .load_data(load_data),
+        .data(data),
+        .clk(clk),
+        .rst(rst),
+        .load(load),
+        .value(value),
+        .address(address),
+        .decay_mode(decay_mode),
+        .init_mode_adder(init_mode_adder),
+        .adder_model(adder_model),
+        .init_mode_acc(init_mode_acc),
+        .neuron_mode(neuron_mode)
+    );
 
     Accumulator acc (
         .clk(clk),
@@ -57,7 +76,7 @@ module Neuron (
     );
 
     assign weight_load = (init_mode_acc == 1'b1) ? load : 0;
-    assign src_addr = address;
+    assign src_addr = (neuron_mode == 1'b1) ? address : src_addr_in;
     assign weight_in = (init_mode_acc == 1'b1) ? value : 0;
 
     assign decay_load = (decay_mode == `IDLE) ? load : adder_done;
