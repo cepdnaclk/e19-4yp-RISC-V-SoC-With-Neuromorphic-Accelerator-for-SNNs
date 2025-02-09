@@ -37,10 +37,10 @@ module multiplier_32bit(
         end else if (running) begin
             if (count < 32) begin
                 if (multiplier[0] == 1'b1) begin
-                    product = product + ({32'b0, multiplicand} << count);
+                    product <= product + ({32'b0, multiplicand} << count);
                 end
-                multiplier = multiplier >> 1;
-                count = count + 1;
+                multiplier <= multiplier >> 1;
+                count <= count + 1;
             end else begin
                 result <= product;
                 done <= 1;

@@ -2,7 +2,7 @@
 `include "../utils/encording.v"
 `include "../utils/multiplier_32bit.v"
 `include "../utils/shifter_32bit.v"
-`include "decay.v"
+`include "potential_decay.v"
 
 module potential_decay_tb;
     reg clk;
