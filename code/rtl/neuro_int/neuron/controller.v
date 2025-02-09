@@ -76,7 +76,7 @@ module controller(
                     if (controller_mode == `SET_CONTROL_SIGNALS) begin
                         controller_status <= `MODE_SELECT;
                     end else begin
-                        controller_status = `MODE_BUFFER;
+                        controller_status <= `MODE_BUFFER;
                         if(controller_mode == `ADDR_WEIGHT_SET) begin
                             buffer_mode <= `BUFFER_ADDRESS;
                         end else if(controller_mode == `WEIGHT_SET) begin
