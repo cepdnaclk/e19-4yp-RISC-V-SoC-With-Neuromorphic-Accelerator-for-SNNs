@@ -37,6 +37,7 @@ module controller_tb();
         clk = 0;
         rst = 1;
         data = 0;
+        load_data = 0;
         #10 rst = 0;
 
         #30 data = 8'b11111111;

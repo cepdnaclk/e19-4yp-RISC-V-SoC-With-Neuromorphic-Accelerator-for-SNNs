@@ -1,6 +1,6 @@
 `timescale 1ns/100ps
 
-module Controller_N(
+module controller(
     input wire load_data,
     input wire [7:0] data,
     input wire clk, rst,
@@ -19,10 +19,17 @@ module Controller_N(
     reg [7:0] buffer [2:0];
     reg [1:0] buffer_status;
     reg [1:0] buffer_mode;
-    reg data_ready;
+    reg data_ready, prev_load_data;
 
-    always @(posedge load_data) begin
-        data_ready <= 1;
+    always @(posedge clk) begin
+        prev_load_data <= load_data;
+        if (rst) begin
+            data_ready <= 0;
+        end else if (load_data && !prev_load_data) begin
+            data_ready <= 1;
+        end else if (data_ready) begin
+            data_ready <= 0;
+        end
     end
 
     always @(posedge clk) begin
@@ -41,7 +48,6 @@ module Controller_N(
             buffer[2] <= 0;
             buffer_status <= 0;
             buffer_mode <= `BUFFER_IDLE;
-            data_ready <= 0;
             neuron_mode <= 1;
         end else if (data_ready) begin
             if (controller_status == `MODE_SELECT) begin
@@ -96,7 +102,6 @@ module Controller_N(
                     end
                 end
             end
-            data_ready <= 0;
         end
     end
 
