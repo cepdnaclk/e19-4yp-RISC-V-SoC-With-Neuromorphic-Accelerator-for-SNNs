@@ -1,7 +1,7 @@
 `include "../utils/encording.v"
-`include "../utils/32bit_mul.v"
-`include "../utils/32bit_shifter.v"
-`include "adder.v"
+`include "../utils/multiplier_32bit.v"
+`include "../utils/shifter_32bit.v"
+`include "potential_adder.v"
 `timescale 1ns/100ps
 
 module potential_adder_tb();
@@ -67,7 +67,7 @@ module potential_adder_tb();
         // Test Izhikevich Model
         #20 model = 2'b01; input_weight = 32'd25; decayed_potential = 32'd35; time_step = 1;
         #10 time_step = 0;
-        #1000;
+        #1100;
         
         // Test QLIF Model
         #20 model = 2'b10; input_weight = 32'd30; decayed_potential = 32'd10; time_step = 1;
