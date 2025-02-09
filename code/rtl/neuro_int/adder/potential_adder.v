@@ -77,18 +77,20 @@ module potential_adder (
             d <= 0;
             v_threshold <= 0;
             u <= 0;
-        end else if (init_mode == `A) begin
-            a <= input_weight;
-        end else if (init_mode == `B) begin
-            b <= input_weight;
-        end else if (init_mode == `C) begin
-            c <= input_weight;
-        end else if (init_mode == `D) begin
-            d <= input_weight;
-        end else if (init_mode == `VT) begin
-            v_threshold <= input_weight;
-        end else if (init_mode == `U) begin
-            u <= input_weight;
+        end else if (load && !prev_load) begin
+            if (init_mode == `A) begin
+                a <= input_weight;
+            end else if (init_mode == `B) begin
+                b <= input_weight;
+            end else if (init_mode == `C) begin
+                c <= input_weight;
+            end else if (init_mode == `D) begin
+                d <= input_weight;
+            end else if (init_mode == `VT) begin
+                v_threshold <= input_weight;
+            end else if (init_mode == `U) begin
+                u <= input_weight;
+            end
         end else if (init_mode == `DEFAULT) begin
             if (adder_send && model == `IZHI_AD && abv_done) begin
                 u <= (weight_added > v_threshold) ? u + d : a_bv_u[31:0];
