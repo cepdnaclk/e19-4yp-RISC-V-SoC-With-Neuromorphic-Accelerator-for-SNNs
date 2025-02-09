@@ -1,6 +1,6 @@
 `timescale 1ns/100ps
 
-module Neuron (
+module neuron (
     input wire clk, rst, time_step,
     input wire [7:0] data,
     input wire load_data,
