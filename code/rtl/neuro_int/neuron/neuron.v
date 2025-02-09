@@ -25,7 +25,7 @@ module neuron (
     wire [9:0] src_addr;
     wire [31:0] weight_in;
 
-    Controller_N controller (
+    controller controller (
         .load_data(load_data),
         .data(data),
         .clk(clk),
@@ -40,7 +40,7 @@ module neuron (
         .neuron_mode(neuron_mode)
     );
 
-    Accumulator acc (
+    accumulator acc (
         .clk(clk),
         .rst(rst),
         .time_step(time_step),
