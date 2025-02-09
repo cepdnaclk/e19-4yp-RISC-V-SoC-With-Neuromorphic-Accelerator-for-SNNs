@@ -25,10 +25,11 @@ module potential_decay(
     wire [63:0] izi_second_term;
     reg start;
     reg decay_send;
+    reg prev_load, prev_time_step;
 
     multiplier_32bit v_squared_mul(
         .clk(clk),
-        .rst(time_step),
+        .rst(rst),
         .start(start),
         .A(membrane_potential),
         .B(membrane_potential),
@@ -38,7 +39,7 @@ module potential_decay(
 
     shifter_32bit izi1(
         .clk(clk),
-        .rst(time_step),
+        .rst(rst),
         .start(v_squared_done),
         .data_in(v_squared[31:0]),
         .shift_amount(5'b00011),
@@ -49,7 +50,7 @@ module potential_decay(
 
     multiplier_32bit izi2(
         .clk(clk),
-        .rst(time_step),
+        .rst(rst),
         .start(start),
         .A(membrane_potential),
         .B(32'h0005),
@@ -59,7 +60,7 @@ module potential_decay(
 
     shifter_32bit lif2(
         .clk(clk),
-        .rst(time_step),
+        .rst(rst),
         .start(start),
         .data_in(membrane_potential),
         .shift_amount(5'b00001),
@@ -70,7 +71,7 @@ module potential_decay(
 
     shifter_32bit lif4(
         .clk(clk),
-        .rst(time_step),
+        .rst(rst),
         .start(start),
         .data_in(membrane_potential),
         .shift_amount(5'b00010),
@@ -81,7 +82,7 @@ module potential_decay(
 
     shifter_32bit lif8(
         .clk(clk),
-        .rst(time_step),
+        .rst(rst),
         .start(start),
         .data_in(membrane_potential),
         .shift_amount(5'b00011),
@@ -90,16 +91,23 @@ module potential_decay(
         .done(done_lif8)
     );
 
-    always @(posedge load) begin
-        membrane_potential <= new_potential;
-        if(mode != `IDLE) begin
-            #10 start <= 1;
-            #10 start <= 0;
+    always @(posedge clk) begin
+        prev_load <= load;
+        if (load && !prev_load) begin
+            if(mode != `IDLE) begin
+                start <= 1;
+            end
+            membrane_potential <= new_potential;
+        end else begin
+            start <= 0;
         end
     end
 
-    always @(posedge time_step) begin
-        decay_send <= 1;
+    always @(posedge clk) begin
+        prev_time_step <= time_step;
+        if (time_step && !prev_time_step) begin
+            output_potential_decay <= membrane_potential;
+        end
     end
 
     always @(posedge clk) begin
@@ -136,11 +144,6 @@ module potential_decay(
             end
         end else if(mode == `IDLE) begin
             // do nothing
-        end
-
-        if(decay_send) begin
-            output_potential_decay <= membrane_potential;
-            decay_send <= 0;
         end
     end
 

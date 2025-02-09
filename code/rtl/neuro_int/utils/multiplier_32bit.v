@@ -13,28 +13,28 @@ module multiplier_32bit(
     reg [31:0] multiplicand, multiplier;
     reg [63:0] product;
     reg [5:0] count;
-    reg running;
+    reg running, prev_start;
 
-    always @(posedge rst) begin
-        multiplicand <= 0;
-        multiplier <= 0;
-        product <= 0;
-        count <= 0;
-        running <= 0;
-        done <= 0;
-    end
-
-    always @(posedge start) begin
-        multiplicand <= A;
-        multiplier <= B;
-        product <= 0;
-        count <= 0;
-        running <= 1;
-        done <= 0;
+    always @(posedge clk) begin
+        prev_start <= start;
     end
 
     always @(posedge clk) begin
-        if (running) begin
+        if (rst) begin
+            multiplicand <= 0;
+            multiplier <= 0;
+            product <= 0;
+            count <= 0;
+            running <= 0;
+            done <= 0;
+        end else if (start && !running && !prev_start) begin
+            multiplicand <= A;
+            multiplier <= B;
+            product <= 0;
+            count <= 0;
+            running <= 1;
+            done <= 0;
+        end else if (running) begin
             if (count < 32) begin
                 if (multiplier[0] == 1'b1) begin
                     product = product + ({32'b0, multiplicand} << count);

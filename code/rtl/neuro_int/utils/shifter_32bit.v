@@ -13,26 +13,26 @@ module shifter_32bit (
 
     reg [31:0] shift_reg;
     reg [4:0] count;
-    reg running;
+    reg running, prev_start;
 
-    always @(posedge rst) begin
-        shift_reg <= 0;
-        count <= 0;
-        running <= 0;
-        done <= 0;
-        data_out <= 0;
-    end
-
-    always @(posedge start) begin
-        shift_reg <= data_in;
-        count <= shift_amount;
-        running <= 1;
-        done <= 0;
-        data_out <= 0;
+    always @(posedge clk) begin
+        prev_start <= start;
     end
 
     always @(posedge clk) begin
-        if (running) begin
+        if (rst) begin
+            shift_reg <= 0;
+            count <= 0;
+            running <= 0;
+            done <= 0;
+            data_out <= 0;
+        end else if (start && !running && !prev_start) begin
+            shift_reg <= data_in;
+            count <= shift_amount;
+            running <= 1;
+            done <= 0;
+            data_out <= 0;
+        end else if (running) begin
             if (count > 0) begin
                 case (mode)
                     2'b00: shift_reg <= shift_reg << 1;  // Logical Left Shift

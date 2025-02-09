@@ -1,4 +1,7 @@
 `timescale 1ns/1ps
+`include "../utils/encording.v"
+`include "../utils/multiplier_32bit.v"
+`include "../utils/shifter_32bit.v"
 `include "decay.v"
 
 module potential_decay_tb;
@@ -30,7 +33,7 @@ module potential_decay_tb;
         forever begin
             time_step = 1;
             #10 time_step = 0;
-            #400;
+            #420;
         end
     end
 
