@@ -27,6 +27,7 @@ module multiplier_32bit(
             count <= 0;
             running <= 0;
             done <= 0;
+            result <= 0;
         end else if (start && !running && !prev_start) begin
             multiplicand <= A;
             multiplier <= B;
@@ -34,6 +35,7 @@ module multiplier_32bit(
             count <= 0;
             running <= 1;
             done <= 0;
+            result <= 0;
         end else if (running) begin
             if (count < 32) begin
                 if (multiplier[0] == 1'b1) begin
