@@ -53,7 +53,6 @@ module controller(
             if (controller_status == `MODE_SELECT) begin
                 if(data == `END_PACKET) begin
                     load <= 1;
-                    #10 load <= 0;
                     neuron_mode <= 0;
                     controller_status <= `MODE_SELECT;
                     address <= 0;
